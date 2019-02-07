@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+@font-face{
+    font-family: "Diavlo";
+    src: url("../fonts/Diavlo_BLACK_II_37.otf");
+}
+
+@font-face{
+    font-family: "Lemon Milk";
+    src: url("../fonts/LemonMilk.otf");
+}
+
+::-webkit-scrollbar{width: 8px;}
+::-webkit-scrollbar-track{background-color: #2A3949;}
+
+::-webkit-scrollbar-thumb{
+    background-color: #182028;
+    border-radius: 20px;
+}
+
+::placeholder{
+    color: #CBFF00;
+    opacity: .5;
+}
+
+.margin--outside{
+    max-width: 1024px;
+    margin: 0 auto;
+    height: inherit;
+}
+
+.header::after,
+.services::after,
+.contacts::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(37,75,130,.5);
+}
+
+.about--title,
+.services--title,
+.portfolios--title,
+.contacts--title{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Lemon Milk";
+    color: white;
+    font-size: 40px;
+    padding: 20px 0;
+    position: relative;
+    z-index: 4;
+}
+
+.about--title span,
+.services--title span,
+.portfolios--title span,
+.contacts--title span{
+    color: #CBFF00;
+}
+
+.header{background-image: url(../img/img-1.jpg);}
+.section{display: flex;}
+.services{background-image: url(../img/img-3.jpg);}
+.contacts{background-image: url(../img/img-5.jpg);}
+
+.header,
+.section,
+.services,
+.portfolios,
+.contacts{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+    background-color: #2A3949;
+}
+
+.header,
+.services,
+.contacts{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+.services--container,
+.portfolios--container,
+.contacts--container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 4;
+    padding: 10px;
+}
+
+.service--title,
+.contact--title{
+    padding-bottom: 15px;
+    font-family: "Lemon Milk";
+}
+
+.service,
+.portfolio,
+.contact--details,
+.form--container{
+    margin: 1%;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px black;
+    background-color: #182028;
+}
+
+.header--container{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 4;
+}
+
+#header{display:block;}
+
+.menu--title{align-self: flex-end;}
+
+.menu--title,
+.menu--social{
+    width: 100%;
+    text-align: center;
+}
+
+.title{
+    font-family: "Diavlo";
+    text-transform: uppercase;
+    color: white;
+    font-size: 80px;
+    padding: 15px 0;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.menu--items,
+.social--items{padding: 0 10px;}
+
+.social--item,
+.menu--item{
+    text-decoration: none;
+    font-family: "Lemon Milk";
+    color: rgba(255, 255, 255, .7);
+    font-size: 20px;
+    transition: all .3s;
+    position: relative;
+    z-index: 4;
+}
+
+.menu--item::before{
+    content: "";
+    height: 5px;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    background-color: #CBFF00;
+    position: absolute;
+    z-index: 2;
+    transition: all .3s;
+    border-radius: 20px;
+}
+
+.social--item{font-size: 50px;}
+
+.menu--items:hover .menu--item::before{
+    width: 50%;
+    transform: translateX(100%);
+}
+
+.menu--items:hover .menu--item,
+.social--items:hover .social--item{color: #CBFF00;}
+
+.section--container:nth-child(1){
+    background-image: url(../img/img-2.jpg);
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 45%;
+    z-index: 0;
+}
+
+.section--container:nth-child(2){
+    width: 55%;
+    background-color: #2A3949;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.about{
+    background-color: #182028;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+}
+
+#about{display:none;}
+
+.about h3{
+    padding: ;
+    color: #CBFF00;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.about--text{
+    color: white;
+    font-size: 20px;
+}
+
+.about--image{
+    float: right;
+    width: 45%;
+    padding: 1em;
+}
+
+.about--skill{
+    background-color: #CBFF00;
+    margin-bottom: 10px; 
+}
+
+.skill--bar{
+    width: 80%;
+    background-color: #2A3949;
+    display: flex;
+    justify-content: space-between;
+    padding: .5em 1em;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Lemon Milk";
+}
+
+#services{display:none;}
+
+.service{
+    width: 48%;
+    padding: 15px 35px;
+    display: flex;
+}
+
+.service--container{
+    color: #CBFF00;
+    align-self: center;
+    font-size: 45px;
+    padding-right: 20px;
+}
+
+.service--details{color: white;}
+.service--text{font-family: "Diavlo";}
+
+#portfolios{display: none;}
+
+.portfolio{
+    width: 23%;
+    overflow: hidden;
+}
+
+.portfolio .portfolio--image{width: 100%;}
+.portfolio--container:hover{cursor: pointer;}
+
+.portfolio--title{
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+
+.portfolio--title a{
+    color: rgba(255, 255, 255, .5);
+    transition: all .3s;
+    text-decoration: none;
+}
+
+.portfolio--title a:hover{ color: #CBFF00;}
+#contacts{display: none;}
+.contact{width: 50%;}
+
+.contact:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact--details{
+    display: flex;
+    padding: 15px 35px;
+}
+
+.contact--container{
+    color: #CBFF00;
+    display: flex;
+    font-size: 45px;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact--description{color: white;}
+
+.form--container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.input--container{
+    width: 100%;
+    position: relative;
+    padding: 0 10px;
+}
+.col{width: 50%;}
+
+input,
+textarea{
+    width: 100%;
+    padding: 10px 25px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #CBFF00;
+    color: white;
+}
+
+textarea{resize: none;}
+
+.submit{
+    color: #CBFF00;
+    border: 2px solid;
+}
+
+.submit:hover{cursor: pointer;}
