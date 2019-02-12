@@ -34,6 +34,21 @@ body{
     opacity: .5;
 }
 
+.menu--bar{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    border: 2px solid white;
+    z-index: 6;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.menu--bar i{
+    color: white;
+    font-size: 30px;
+}
+
 .margin--outside{
     max-width: 1024px;
     margin: 0 auto;
