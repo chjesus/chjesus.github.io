@@ -217,6 +217,24 @@ body{
 .menu--items:hover .menu--item,
 .social--items:hover .social--item{color: #CBFF00;}
 
+.menu--mobile{
+    position: absolute;
+    z-index: 6;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+}
+
+.menu--mobile .menu{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+}
+
 .section--container:nth-child(1){
     background-image: url(../img/img-2.jpg);
     background-size: cover;
