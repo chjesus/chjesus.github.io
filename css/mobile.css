@@ -36,6 +36,7 @@
     .portfolio{width: 48%;}
     .contacts--container{flex-direction: column;}
     .contact{width: 100%;}
+    .menu--bar{display: block;}
 }
 
 @media screen and (max-width: 479px){
