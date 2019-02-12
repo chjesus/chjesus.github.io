@@ -40,6 +40,13 @@ body{
     right: 5%;
     border: 2px solid white;
     z-index: 6;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.menu--bar i{
+    color: white;
+    font-size: 30px;
 }
 
 .margin--outside{
