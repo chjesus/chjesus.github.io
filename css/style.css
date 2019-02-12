@@ -37,11 +37,12 @@ body{
 .menu--bar{
     position: absolute;
     top: 5%;
-    right: 5%;
+    right: 2%;
     border: 2px solid white;
     z-index: 6;
-    padding: 1.5rem;
+    padding: 1rem;
     cursor: pointer;
+    display: none;
 }
 
 .menu--bar i{
