@@ -1,22 +1,15 @@
 @media screen and (max-width: 767px){
     .title{font-size: 60px;}
     .menu--title .menu{display: none;}
-
     .section{flex-direction: column;}
+    .section--container:nth-child(1),.section--container:nth-child(2){width: 100%;}
     .section--container:nth-child(1){height: 45%; background-position: top center;}
-    .section--container:nth-child(2){width: 55%;}
-    .section--container:nth-child(1), .section--container:nth-child(2){width: 100%;}
     .about--image{float: none; display: none;}
     .about{margin-left: 10px; margin-right: 10px;}
-
     .services,
     .portfolios,
     .contacts{overflow: auto;}
-    .service{
-        width: 100%;
-        margin: 2%;
-    }
-
+    .service{width: 100%; margin: 2%;}
     .portfolio{width: 48%;}
     .contacts--container{flex-direction: column;}
     .contact{width: 100%;}
