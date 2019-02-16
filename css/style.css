@@ -154,8 +154,6 @@ body{
     z-index: 4;
 }
 
-#header{display:block;}
-
 .menu--title{align-self: flex-end;}
 
 .menu--title,
@@ -261,8 +259,6 @@ body{
     box-shadow: 5px 5px 10px black;
 }
 
-#about{display:none;}
-
 .about h3{
     padding: ;
     color: #CBFF00;
@@ -298,8 +294,6 @@ body{
     font-family: "Lemon Milk";
 }
 
-#services{display:none;}
-
 .service{
     width: 48%;
     padding: 15px 35px;
@@ -315,8 +309,6 @@ body{
 
 .service--details{color: white;}
 .service--text{font-family: "Diavlo";}
-
-#portfolios{display: none;}
 
 .portfolio{
     width: 23%;
@@ -339,7 +331,6 @@ body{
 }
 
 .portfolio--title a:hover{ color: #CBFF00;}
-#contacts{display: none;}
 .contact{width: 50%;}
 
 .contact:nth-child(1){
@@ -396,3 +387,6 @@ textarea{resize: none;}
 }
 
 .submit:hover{cursor: pointer;}
+
+.is-active{display: block;}
+.no-active{display: none}
