@@ -396,3 +396,6 @@ textarea{resize: none;}
 }
 
 .submit:hover{cursor: pointer;}
+
+.active{display: flex;}
+.active--bar{display: block;}
