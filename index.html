@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Author: Jesús Chacón, Developer: Front-end, Category: Javascript">
+    <link rel="icon" type="image/png" href="img/Recurso.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <title>Jesús Chacón</title>
 </head>
 <body>
-    <header class="header" id="header">
+    <header class="header active" id="header">
         <div class="margin--outside">
             <div class="header--container">
                 <div class="menu--title">
                     <h1 class="title">Jesús Chacón</h1>
-                    <ul class="menu">
+                    <ul class="menu" id="menu-desktop">
                         <li class="menu--items"><a href="#" class="menu--item">inicio</a></li>
                         <li class="menu--items"><a href="#" class="menu--item">sobre mi</a></li>
                         <li class="menu--items"><a href="#" class="menu--item">sevicios</a></li>
@@ -25,15 +30,15 @@
             <div class="header--container">
                 <div class="menu--social">
                     <ul class="menu">
-                        <li class="social--items"><a href="#" class="social--item"><i class="fab fa-github-square"></i></a></li>
-                        <li class="social--items"><a href="#" class="social--item"><i class="fab fa-twitter-square"></i></a></li>
-                        <li class="social--items"><a href="#" class="social--item"><i class="fab fa-facebook-square"></i></a></li>
+                        <li class="social--items"><a href="https://github.com/chjesus" target="-blank" class="social--item"><i class="fab fa-github-square"></i></a></li>
+                        <li class="social--items"><a href="https://twitter.com/ch__jesus" target="-blank" class="social--item"><i class="fab fa-twitter-square"></i></a></li>
+                        <li class="social--items"><a href="https://www.facebook.com/jesus.chacon.1420" target="-blank" class="social--item"><i class="fab fa-facebook-square"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
-    <section class="section" id="about">
+    <section class="section active" id="about">
         <div class="section--container"></div>
         <div class="section--container">
             <h2 class="about--title">sobre <span>mi</span></h2>
@@ -89,7 +94,7 @@
             </article>
         </div>
     </section>
-    <section class="services" id="services">
+    <section class="services active" id="services">
         <div class="margin--outside">
             <h2 class="services--title">mis <span>servicios</span></h2>
             <div class="services--container">
@@ -150,7 +155,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolios" id="portfolios">
+    <section class="portfolios active" id="portfolios">
         <div class="margin--outside">
             <h2 class="portfolios--title">mi <span>portafolio</span></h2>
             <div class="portfolios--container">
@@ -205,7 +210,7 @@
             </div>
         </div>
     </section>
-    <section class="contacts" id="contacts">
+    <section class="contacts active" id="contacts">
         <div class="margin--outside">
             <h2 class="contacts--title">Estar en <span>contacto</span></h2>
             <div class="contacts--container">
@@ -260,5 +265,18 @@
             </div>
         </div>
     </section>
+    <div class="menu--mobile">
+        <nav class="menu">
+            <ul id="menu-mobile" style="text-align: center; list-style: none;">
+                <li class="menu--items"><a href="#" class="menu--item">inicio</a></li>
+                <li class="menu--items"><a href="#" class="menu--item">sobre mi</a></li>
+                <li class="menu--items"><a href="#" class="menu--item">sevicios</a></li>
+                <li class="menu--items"><a href="#" class="menu--item">portafolio</a></li>
+                <li class="menu--items"><a href="#" class="menu--item">contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="menu--bar"><i class="fas fa-bars"></i></div>
+    <script src="js/main.js"></script>
 </body>
 </html>
