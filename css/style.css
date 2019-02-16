@@ -13,12 +13,14 @@ body{
 
 @font-face{
     font-family: "Diavlo";
-    src: url("../fonts/Diavlo_BLACK_II_37.otf");
+    font-display: auto;
+    src: local('Diavlo') url("../fonts/Diavlo_BLACK_II_37.otf") format('otf');
 }
 
 @font-face{
     font-family: "Lemon Milk";
-    src: url("../fonts/LemonMilk.otf");
+    font-display: auto;
+    src: local('Lemon Milk') url("../fonts/LemonMilk.otf") format('otf');
 }
 
 ::-webkit-scrollbar{width: 8px;}
