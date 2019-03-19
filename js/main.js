@@ -1,37 +1,53 @@
 (function(){
-    const listBlocks = Array.prototype.slice.apply(document.querySelectorAll('.active'));
     const menuDesktop = document.getElementById('menu-desktop');
     const menuMobile = document.getElementById('menu-mobile');
     const menuIcon = document.querySelector('.menu--bar');
     const modalMobile = document.querySelector('.menu--mobile');
+    const title = document.getElementById('title');
+    const subTitle = document.querySelector('.sub--title');
+    let bool = true;
+    let cont = 0;
+
+    title.addEventListener('animationend',()=>{
+        cont++;
+        // subTitle.classList.add('sub--title--active')
+        if(cont == 2){
+            if(bool){
+                setTimeout(() => subTitle.classList.add('sub--title--active'),200);
+                setTimeout(()=> {
+                    subTitle.classList.remove('sub--title--active')
+                    title.classList.remove('title--animate');
+                    title.classList.add('title--animate--reverse')
+                },5000)
+                bool = false;
+            }else{
+                title.classList.remove('title--animate--reverse');
+                title.classList.add('title--animate');
+                bool = true;
+            }
+            cont = 0;
+        }
+
+        // let textInit = setTimeout(() => subTitle.classList.add('sub--title--active'),200);
+        // let textEnd = setTimeout(()=> subTitle.classList.remove('sub--title--active'),1000);
+    });
 
     menuDesktop.addEventListener('click', event => menuList(event,'.menu--title',false));
     menuIcon.addEventListener('click', () => modalMobile.classList.toggle('active'));
     menuMobile.addEventListener('click',event => menuList(event,'.menu--mobile',true));
 
     function menuList(event,menuType,validation){
-        const liList = Array.prototype.slice.apply(document.querySelectorAll(menuType+' .menu--items'));
-        const aList = Array.prototype.slice.apply(document.querySelectorAll(menuType+' .menu--item'));
-
-        if(event.target.classList.contains('menu--item')) containsConditional(aList,validation)
-        else if(event.target.classList.contains('menu--items')) containsConditional(liList,validation)
-    }
-
-    function containsConditional(list,validation){
-        if(validation){
-            activeStyle(list);
-            modalMobile.classList.toggle('active');
-        }else activeStyle(list);
-    }
-
-    function activeStyle(listMenu){
-        const number = listMenu.indexOf(event.target);
-        listBlocks.map(list => list.style.display="none");
-
-        if(number!=1) listBlocks[number].style.display="block";
-        else listBlocks[number].style.display="flex";
-
-        if(number!=0) menuIcon.classList.add('active--bar');
-        else menuIcon.classList.remove('active--bar');
+        const section = Array.prototype.slice.apply(document.querySelectorAll('.section'));
+        const menuList = Array.prototype.slice.apply(document.querySelectorAll(menuType+' .menu--item'));
+        if(event.target.classList.contains('menu--item')){
+            const value = menuList.indexOf(event.target);
+            section.map(sect => sect.classList.remove('active'));
+            section[value].classList.add('active');
+            value !=0 ? (
+                menuIcon.classList.add('active--bar'),
+                subTitle.classList.remove('sub--title--active')
+                ) : menuIcon.classList.remove('active--bar');
+            if(validation) modalMobile.classList.toggle('active')
+        }
     }
 })();
