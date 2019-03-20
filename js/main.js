@@ -8,6 +8,8 @@
     let bool = true;
     let cont = 0;
 
+    AOS.init();
+    
     title.addEventListener('animationend',()=>{
         cont++;
         // subTitle.classList.add('sub--title--active')

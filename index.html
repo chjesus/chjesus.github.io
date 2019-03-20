@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="img/Recurso.png" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Jesús Chacón</title>
 </head>
 <body>
@@ -41,10 +42,11 @@
         <div class="margin--outside">
             <h2 class="about--title">Sobre mi</h2>
             <div class="about--container">
-                <article class="abouts">
+                <article class="abouts" data-aos="fade-down"
+                data-aos-duration="1500">
                     <p class="about--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minus esse earum sapiente adipisci quos, repellat beatae reprehenderit. Dolorem autem aliquam libero enim laboriosam, praesentium vero dolor velit, repellendus accusantium corporis facilis recusandae nesciunt, necessitatibus quos rem provident! Possimus asperiores rem iure repellat alias ab exercitationem ipsam voluptates neque. Aliquam odio neque maxime fuga ea quo culpa provident sequi deleniti ipsam quidem unde labore nesciunt, autem aliquid sed ipsum omnis suscipit! Dolorem mollitia animi accusamus deleniti dignissimos similique quas perferendis aliquid facilis quaerat? Aut nulla perferendis minus at ex dolore reprehenderit quisquam a vitae sit cumque doloribus maxime, ea officiis!</p>
                 </article>
-                <article class="abouts">
+                <article class="abouts" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <h3 class="about--info">Perfil</h3>
                     <p class="about--info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore ullam dolores nihil distinctio maxime. Beatae natus minima earum veritatis ipsam.</p>
                     <ul class="about--info">
@@ -66,7 +68,7 @@
                         </li>
                     </ul>
                 </article>
-                <article class="abouts">
+                <article class="abouts" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <h3 class="about--info">Habilidades</h3>
                     <div class="about--skills">
                         <div class="about--skill">
@@ -114,21 +116,17 @@
         <div class="margin--outside">
             <h2 class="services--title">Servicios</h2>
             <div class="services--container">
-                <article class="service">
-                    <figure class="service--container"><i class="fas fa-cog"></i></figure>
-                    <h3 class="service--title">Lorem, ipsum dolor.</h3>
+                <article class="service" data-aos="zoom-in" data-aos-duration="1000">
+                    <figure class="service--container"><i class="icon-code"></i></figure>
+                    <h3 class="service--title">Desarrollo con Javascript</h3>
                 </article>
-                <article class="service">
-                    <div class="service--container"><i class="fas fa-cog"></i></div>
-                    <h3 class="service--title">Lorem, ipsum dolor.</h3>
+                <article class="service" data-aos="zoom-in" data-aos-duration="2000">
+                    <div class="service--container"><i class="icon-window"></i></div>
+                    <h3 class="service--title">Desarrollo Web</h3>
                 </article>
-                <article class="service">
-                    <div class="service--container"><i class="fas fa-cog"></i></div>
-                    <h3 class="service--title">Lorem, ipsum dolor.</h3>
-                </article>
-                <article class="service">
-                    <div class="service--container"><i class="fas fa-cog"></i></div>
-                    <h3 class="service--title">Lorem, ipsum dolor.</h3>
+                <article class="service" data-aos="zoom-in" data-aos-duration="3000">
+                    <div class="service--container"><i class="icon-react"></i></div>
+                    <h3 class="service--title">Desarrollo de Apps</h3>
                 </article>
             </div>
         </div>
@@ -176,7 +174,7 @@
         <div class="margin--outside">
             <h2 class="contacts--title">Contacto</h2>
             <div class="contacts--container">
-                <article class="contact">
+                <article class="contact" data-aos="fade-right" data-aos-offset="200" data-aos-duration="500">
                     <form action="" class="form--container">
                         <div class="input--container col">
                             <input type="text" placeholder="Nombre">
@@ -195,10 +193,10 @@
                         </div>
                     </form>
                 </article>
-                <article class="contact">
+                <article class="contact" data-aos="fade-left" data-aos-offset="200" data-aos-duration="500">
                     <div class="contact--details">
                         <div class="contact--container">
-                            <i class="fas fa-envelope-square"></i>
+                            <i class="icon-envelope"></i>
                         </div>
                         <div class="contact--description">
                             <h3 class="contact--title">Correo</h3>
@@ -207,7 +205,7 @@
                     </div>
                     <div class="contact--details">
                         <div class="contact--container">
-                            <i class="fas fa-phone-square"></i>
+                            <i class="icon-phone-square"></i>
                         </div>
                         <div class="contact--description">
                             <h3 class="contact--title">Télefono</h3>
@@ -216,20 +214,20 @@
                     </div>
                     <div class="contact--details">
                         <div class="contact--container">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="icon-map-marker"></i>
                         </div>
                         <div class="contact--description">
-                            <h3 class="contact--title">Dirección</h3>
-                            <p class="contact--text">San Cristóbal - Edo Táchira</p>
+                            <h3 class="contact--title">Localización</h3>
+                            <p class="contact--text">Venezuela</p>
                         </div>
                     </div>
                     <div class="contact--details">
                         <div class="contact--container">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="icon-linkedin-square"></i>
                         </div>
                         <div class="contact--description">
-                            <h3 class="contact--title">Dirección</h3>
-                            <p class="contact--text">San Cristóbal - Edo Táchira</p>
+                            <h3 class="contact--title">Linkedin</h3>
+                            <p class="contact--text">Lorem, ipsum dolor.</p>
                         </div>
                     </div>
                 </article>
@@ -249,6 +247,7 @@
         </nav>
     </div>
     <div class="menu--bar"><i class="icon-menu"></i></div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
