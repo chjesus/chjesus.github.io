@@ -175,18 +175,18 @@
             <h2 class="contacts--title">Contacto</h2>
             <div class="contacts--container">
                 <article class="contact" data-aos="fade-right" data-aos-offset="200" data-aos-duration="500">
-                    <form action="" class="form--container">
+                    <form action="php/formulario.php" method="POST" class="form--container">
                         <div class="input--container col">
-                            <input type="text" placeholder="Nombre">
+                            <input type="text" placeholder="Nombre" name="nombre">
                         </div>
                         <div class="input--container col">
-                            <input type="text" placeholder="Télefono">
+                            <input type="text" placeholder="Télefono" name="telefono">
                         </div>
                         <div class="input--container">
-                            <input type="text" placeholder="Correo">
+                            <input type="text" placeholder="Correo" name="correo">
                         </div>
                         <div class="input--container">
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                            <textarea id="" cols="30" rows="10" placeholder="Mensaje" name="asunto"></textarea>
                         </div>
                         <div class="input--container">
                             <input type="submit" value="Enviar" class="submit">
