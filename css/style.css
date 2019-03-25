@@ -211,8 +211,9 @@ li{list-style: none;}
     left: 50%;
     transform: translate(-50%,-50%);
     width: 100%;
-    color: white;
+    color: #E6AF2E;
     animation-fill-mode: forwards;
+    text-shadow: 1px 2px 3px black;
 }
 
 .title::before{
@@ -270,11 +271,12 @@ li{list-style: none;}
 .menu--item{
     text-decoration: none;
     font-family: "Lemon Milk";
-    color: rgba(255, 255, 255, .7);
+    color: rgba(255, 255, 255, .8);
     font-size: 20px;
     transition: all .3s;
     position: relative;
     z-index: 4;
+    text-shadow: 1px 2px 3px black;
 }
 
 .menu--item::before{
@@ -298,7 +300,10 @@ li{list-style: none;}
 }
 
 .menu--items:hover .menu--item,
-.social--items:hover .social--item{color: #E6AF2E;}
+.social--items:hover .social--item{
+    color: #E6AF2E;
+    text-shadow: 1px 2px 3px black;
+}
 
 .menu--mobile{
     position: absolute;
@@ -474,26 +479,28 @@ p.about--info{color: #888888;}
 
 .contact{
     display: flex;
-    width: 50%;
-    flex-direction: column;
+    width: 100%;
     justify-content: center;
 }
 
 .contact--details{
-    display: flex;
-    padding: 10px 35px;
+    display: inherit;
+    flex-direction: column;
+    padding: 10px;
+    width: inherit;
 }
 
 .contact--container{
     color: #FFFFFF;
     font-size: 40px;
-    width: 40px;
-    height: 40px;
+    width: inherit;
     text-align: center;
-    margin-right: 1rem;
 }
 
-.contact--description{color: white;}
+.contact--description{
+    color: white;
+    text-align: center;
+}
 .contact--title{color: #E6AF2E;}
 .contact--description p{color: #6e6e6e;}
 .form--container{
