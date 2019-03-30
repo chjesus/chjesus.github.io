@@ -1,28 +1,32 @@
-@media screen and (max-width: 768px){
-    .title{font-size: 60px;}
-    .menu--title .menu{display: none;}
-    .wrapper{flex-direction: column;}
-    .section--container:nth-child(1),.section--container:nth-child(2){width: 100%;}
-    .section--container:nth-child(1){height: 45%; background-position: top center;}
-    .about--image{float: none; display: none;}
-    .about--me{margin-left: 10px; margin-right: 10px;}
-    .services,
-    .portfolios,
-    .contacts{overflow: auto;}
-    .contact{flex-direction: column;}
-    .service{width: 100%; margin: 2%;}
+@media screen and (max-width:1024px){
+    .title{font-size: 95px;}
+    .about,
+    .portfolios{padding: 5rem 0;}
     .portfolio{width: 48%;}
-    .contacts--container{flex-direction: column;}
-    .contact{width: 100%;}
-    .menu--bar{display: block;}
+}
+@media screen and (max-width: 768px){
+    .nav .menu{display: none;}
+    .title{font-size: 60px;}
+    .sub--title{font-size: 20px;}
+    .about,.services,.portfolios,.contacts{padding: 5rem 0 1rem;}
+    .abouts{margin: 0;}
+    .abouts{width: 100% !important;}
+    .services .services--container{flex-wrap: nowrap;}
+    .portfolio{width: 100%;}
+    .contact{flex-wrap: wrap;}
+    .contact--details{width: 48%;}
+    .service{width: 100%; margin: 2%;}
 }
 
 @media screen and (max-width: 480px){
     .title{font-size: 40px;}
-    .portfolio{width: 100%;}
+    .sub--title{font-size: 12px;}
+    .abouts{padding: 30px 10px 0;}
+    .contact{flex-direction: column;}
+    .contact--details{width: 100%;}
 }
 
 @media screen and (max-width: 320px){
     .title{font-size: 35px;}
-    .col{width: 100%;}
+    .services--container{flex-wrap: wrap !important;}
 }

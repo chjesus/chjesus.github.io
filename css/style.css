@@ -122,36 +122,30 @@ li{list-style: none;}
 
 .header{
     background-image: url(../img/img-1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    justify-content: center;
+    position: relative;
+    width: 100%;
 }
 
-.header,
 .about,
 .services,
 .portfolios,
 .contacts{
+    padding: 4rem 5rem;
     width: 100%;
-    position: relative;
-    z-index: 0;
-}
-.about,
-.services,
-.portfolios,
-.contacts{
-    padding: 5rem;
 }
 
 .services,
 .contacts,
 .footer{background-color: #151515;}
-
 .portfolios{background-color: #ebebeb}
-
-.header{
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
 
 .about--container,
 .services--container,
@@ -172,18 +166,38 @@ li{list-style: none;}
 .contact--details,
 .form--container{margin: 1%;}
 
-.header--container{
+.header--nav{
     width: 100%;
-    height: 50%;
+    border-bottom: 1px solid #FFFFFF;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    padding: 1em 0;
+}
+
+.nav{
+    display: flex;
+    width: inherit;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.header--social{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
+    bottom: 0;
     z-index: 4;
 }
 
-.menu--title{align-self: flex-end;}
+.header--title{
+    text-align: center;
+}
 
 .menu--title,
 .menu--social{
@@ -195,11 +209,14 @@ li{list-style: none;}
     font-family: "Diavlo";
     text-transform: uppercase;
     color: white;
-    font-size: 80px;
+    font-size: 100px;
     padding: 15px 0;
     position: relative;
     z-index: 0;
     color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .title::before,
@@ -226,32 +243,25 @@ li{list-style: none;}
     clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
 }
 
-.title--animate::before{
-    animation-name: animateUp;
-    animation-duration: 4s; 
-}
-.title--animate::after{
-    animation-name: animateDown;
-    animation-duration: 4s; 
-}
+.title--animate::before{animation-name: animateUp;}
+.title--animate::after{animation-name: animateDown;}
+.title--animate--reverse::before{animation-name: animateUpReverse;}
+.title--animate--reverse::after{animation-name: animateDownReverse;}
+.title--animate::before,
+.title--animate::after,
+.title--animate--reverse::before,
+.title--animate--reverse::after{animation-duration: 4s;}
 
-.title--animate--reverse::before{
-    animation-name: animateUpReverse;
-    animation-duration: 4s; 
-}
-.title--animate--reverse::after{
-    animation-name: animateDownReverse;
-    animation-duration: 4s; 
-}
 .sub--title{
-    color: white;
+    color: #FFFFFF;
     position: absolute;
-    font-size: 35px;
+    font-size: 33px;
     z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     display: none;
+    text-shadow: 1px 2px 3px #000000;
 }
 
 .sub--title--active{display: block;}
@@ -261,7 +271,6 @@ li{list-style: none;}
     justify-content: center;
     list-style: none;
     flex-wrap: wrap;
-    width: 100%;
 }
 
 .menu--items,
@@ -329,9 +338,7 @@ li{list-style: none;}
 }
 
 .abouts:nth-child(2),
-.abouts:nth-child(3){
-    width: 48%;
-}
+.abouts:nth-child(3){width: 48%;}
 
 .abouts h3{
     padding-left: 20px; 
@@ -399,6 +406,7 @@ p.about--info{color: #888888;}
     top: -2.2rem;
     right: 0;
 }
+
 .info::after,
 .info::before{
     content: "";
@@ -429,12 +437,11 @@ p.about--info{color: #888888;}
     color: white;
     align-self: center;
     font-size: 45px;
-    padding-right: 20px;
 }
 
 .service--title{color: #E6AF2E;}
 
-.portfolio{
+.portfolio{   
     width: 31.3333333333%;
     position: relative;
     z-index: 10;
@@ -453,7 +460,7 @@ p.about--info{color: #888888;}
     text-decoration: none;
     font-weight: 900;
     font-size: 50px;
-    color: white;
+    color: #E6AF2E;
 }
 
 .portfolio::after{
@@ -495,6 +502,7 @@ p.about--info{color: #888888;}
     font-size: 40px;
     width: inherit;
     text-align: center;
+    width: 100%;
 }
 
 .contact--description{
@@ -508,7 +516,7 @@ p.about--info{color: #888888;}
     flex-wrap: wrap;
     padding: 20px;
 }
-
+/*
 .input--container{
     width: 100%;
     position: relative;
@@ -535,7 +543,7 @@ textarea{resize: none;}
 }
 
 .submit:hover{cursor: pointer;}
-
+*/
 .footer{
     text-align: center;
     color: #6e6e6e;

@@ -33,7 +33,22 @@
         // let textInit = setTimeout(() => subTitle.classList.add('sub--title--active'),200);
         // let textEnd = setTimeout(()=> subTitle.classList.remove('sub--title--active'),1000);
     });
+    
+    window.addEventListener('scroll',()=>{
+        let menu = document.getElementById('nav');
+        let scrollValue = document.documentElement.scrollTop;
 
+        scrollValue > 0 ? (
+            menu.style.backgroundColor = "#151515",
+            menu.style.padding = "1.2em 0",
+            menu.style.transition = ".3s linear"
+        ) : (
+            menu.style.backgroundColor = "transparent",
+            menu.style.padding = "1em 0",
+            menu.style.transition = ".3s linear"
+        )
+    })
+/*
     menuDesktop.addEventListener('click', event => menuList(event,'.menu--title',false));
     menuIcon.addEventListener('click', () => modalMobile.classList.toggle('active'));
     menuMobile.addEventListener('click',event => menuList(event,'.menu--mobile',true));
@@ -51,5 +66,6 @@
                 ) : menuIcon.classList.remove('active--bar');
             if(validation) modalMobile.classList.toggle('active')
         }
-    }
+    }*/
+
 })();
