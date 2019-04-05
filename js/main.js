@@ -1,7 +1,4 @@
 (function(){
-    const menuDesktop = document.getElementById('menu-desktop');
-    const menuIcon = document.querySelector('.menu--bar');
-    const modalMobile = document.querySelector('.menu--mobile');
     const title = document.getElementById('title');
     const subTitle = document.querySelector('.sub--title');
     const menuBar = document.getElementById('menu--bar');
@@ -20,13 +17,54 @@
         speedAsDuration: true,
         easing: 'easeInOutQuad'
     });
+
     
+    var animationConstruir = () => {
+        let arrayTitles = ['Desarrollador Web','Desarrollador JavaScript'];
+        let subTitle = document.getElementById('sub');
+        let subTitleText = subTitle.textContent;
+        let tamText = arrayTitles[0].length;
+        let sliceCont = 0;
+
+        let textInit = setInterval(() => {
+            if(tamText > sliceCont-1){
+                let word = arrayTitles[0];
+                let visible = word.slice(0,sliceCont);
+                sliceCont++;
+                subTitle.textContent = visible + '|';
+            }else{
+                console.log("entro")
+                clearInterval(textInit);
+                let time = setTimeout(() => {
+                    animationDelete(subTitle);
+                },2000);
+            }
+        },70);
+    }
+
+    var animationDelete = (subTitle) => {
+        let tamText = subTitle.textContent.length;
+        console.log(tamText);
+        
+        let deleteInit = setInterval(()=>{
+            if(tamText > -1){
+                let word = subTitle.textContent;
+                let visible = word.slice(0,tamText);
+                tamText--;
+                subTitle.textContent = visible;
+            }else{
+                clearInterval(deleteInit);
+            }
+        },70);
+    }
+
     title.addEventListener('animationend',()=>{
         cont++;
         if(cont == 2){
             if(bool){
                 setTimeout(() => subTitle.classList.add('sub--title--active'),200);
-                setTimeout(()=> {
+                setTimeout(() => animationConstruir(),300);
+                setTimeout(() => {
                     subTitle.classList.remove('sub--title--active')
                     title.classList.remove('title--animate');
                     title.classList.add('title--animate--reverse')
@@ -45,16 +83,13 @@
         validationAnimate ? (
             iconAnimate.classList.remove('bar--animation--reverse'),
             iconAnimate.classList.add('bar--animation'),
-            //menuMobile.style.visibility = 'visible',
             menuMobile.style.display = 'flex',
             validationAnimate = false
         )
         : (
-            menuMobile.style.display = 'none',
-            //menuMobile.style.transitionDelay = '.3s',
-            //menuMobile.style.visibility = 'hidden',
             iconAnimate.classList.remove('bar--animation'),
             iconAnimate.classList.add('bar--animation--reverse'),
+            menuMobile.style.display = 'none',
             validationAnimate = true
         );
 
