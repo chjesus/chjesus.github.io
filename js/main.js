@@ -1,12 +1,17 @@
 (function(){
     const menuDesktop = document.getElementById('menu-desktop');
-    const menuMobile = document.getElementById('menu-mobile');
     const menuIcon = document.querySelector('.menu--bar');
     const modalMobile = document.querySelector('.menu--mobile');
     const title = document.getElementById('title');
     const subTitle = document.querySelector('.sub--title');
+    const menuBar = document.getElementById('menu--bar');
+    const iconAnimate = document.getElementById('icon');
+    const menuMobile = document.getElementById('menu-mobile');
+
+
     let bool = true;
     let cont = 0;
+    let validationAnimate = true; 
 
     AOS.init();
     
@@ -18,7 +23,6 @@
     
     title.addEventListener('animationend',()=>{
         cont++;
-        // subTitle.classList.add('sub--title--active')
         if(cont == 2){
             if(bool){
                 setTimeout(() => subTitle.classList.add('sub--title--active'),200);
@@ -35,12 +39,32 @@
             }
             cont = 0;
         }
-
-        // let textInit = setTimeout(() => subTitle.classList.add('sub--title--active'),200);
-        // let textEnd = setTimeout(()=> subTitle.classList.remove('sub--title--active'),1000);
     });
     
+    menuBar.addEventListener('click',()=>{
+        validationAnimate ? (
+            iconAnimate.classList.remove('bar--animation--reverse'),
+            iconAnimate.classList.add('bar--animation'),
+            //menuMobile.style.visibility = 'visible',
+            menuMobile.style.display = 'flex',
+            validationAnimate = false
+        )
+        : (
+            menuMobile.style.display = 'none',
+            //menuMobile.style.transitionDelay = '.3s',
+            //menuMobile.style.visibility = 'hidden',
+            iconAnimate.classList.remove('bar--animation'),
+            iconAnimate.classList.add('bar--animation--reverse'),
+            validationAnimate = true
+        );
+
+    })
+
     window.addEventListener('scroll',()=>{
+        let skill = document.querySelector('.about--skill');
+        console.log(skill.offsetTop);
+//        console.log(window.scrollY);
+
         let menu = document.getElementById('nav');
         let scrollValue = document.documentElement.scrollTop;
 
@@ -54,24 +78,4 @@
             menu.style.transition = ".3s linear"
         )
     })
-/*
-    menuDesktop.addEventListener('click', event => menuList(event,'.menu--title',false));
-    menuIcon.addEventListener('click', () => modalMobile.classList.toggle('active'));
-    menuMobile.addEventListener('click',event => menuList(event,'.menu--mobile',true));
-
-    function menuList(event,menuType,validation){
-        const section = Array.prototype.slice.apply(document.querySelectorAll('.section'));
-        const menuList = Array.prototype.slice.apply(document.querySelectorAll(menuType+' .menu--item'));
-        if(event.target.classList.contains('menu--item')){
-            const value = menuList.indexOf(event.target);
-            section.map(sect => sect.classList.remove('active'));
-            section[value].classList.add('active');
-            value !=0 ? (
-                menuIcon.classList.add('active--bar'),
-                subTitle.classList.remove('sub--title--active')
-                ) : menuIcon.classList.remove('active--bar');
-            if(validation) modalMobile.classList.toggle('active')
-        }
-    }*/
-
 })();

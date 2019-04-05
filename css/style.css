@@ -84,22 +84,125 @@ li{list-style: none;}
     from{transform: translate(-50%,-80%);}
     to{transform: translate(-50%,-50%);}
 }
+@keyframes animateBarMidlle{
+    from{background-color: #FFFFFF;}
+    50%{background-color: #FFFFFF;}
+    60%{background-color: transparent;}
+    to{background-color: transparent;}
+}
+
+@keyframes animateBarUp{
+    from{top: -8px;}
+    50%{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    to{
+        top: 0;
+        transform: translateY(-50%);
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes animateBarDown{
+    from{top: 8px;}
+    50%{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    to{
+        top: 0;
+        transform: translateY(-50%);
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes animateBarMidlleReverse{
+    from{background-color: transparent;}
+    50%{background-color: transparent;}
+    60%{background-color: #FFFFFF;}
+    to{background-color: #FFFFFF;}
+}
+
+@keyframes animateBarUpReverse{
+    from{
+        top: 0;
+        transform: translateY(-50%);
+        transform: rotate(45deg);
+    }
+    50%{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    to{top: -8px;}
+}
+
+@keyframes animateBarDownReverse{
+    from{
+        top: 0;
+        transform: translateY(-50%);
+        transform: rotate(-45deg);
+    }
+    50%{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    to{top: 8px;}
+}
 
 .menu--bar{
-    position: absolute;
-    top: 5%;
-    right: 2%;
-    border: 2px solid white;
-    z-index: 6;
-    padding: 1rem;
+    border: 1px solid white;
+    padding: 1rem .5rem;
     cursor: pointer;
+    display: block;
+    cursor: pointer;
+    position: relative;
     display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2
 }
 
-.menu--bar i{
-    color: white;
-    font-size: 30px;
+.menu--bar span{
+    display: block;
+    position: relative;
 }
+
+.menu--bar span,
+.menu--bar span::before,
+.menu--bar span::after{
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+}
+
+.menu--bar span::before,
+.menu--bar span::after{
+    content: "";
+    position: absolute;
+}
+
+.menu--bar span::before {top: -8px;}
+.menu--bar span::after {top: 8px;}
+
+.bar--animation,
+.bar--animation::before,
+.bar--animation::after,
+.bar--animation--reverse,
+.bar--animation--reverse::before,
+.bar--animation--reverse::after{
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+
+}
+
+.bar--animation{animation-name: animateBarMidlle;}
+.bar--animation::before{animation-name: animateBarUp;}
+.bar--animation::after{animation-name: animateBarDown;}
+.bar--animation--reverse{animation-name: animateBarMidlleReverse;}
+.bar--animation--reverse::before{animation-name: animateBarUpReverse;}
+.bar--animation--reverse::after{animation-name: animateBarDownReverse;}
 
 .margin--outside{
     max-width: 1024px;
@@ -316,20 +419,17 @@ li{list-style: none;}
 
 .menu--mobile{
     position: absolute;
-    z-index: 6;
+    z-index: 0;
     width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, .5);
     display: none;
-}
-
-.menu--mobile .menu{
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: inherit;
+    flex-direction: column;
+    /*visibility: hidden;*/
 }
 
 .abouts{

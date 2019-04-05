@@ -6,6 +6,7 @@
 }
 @media screen and (max-width: 768px){
     .nav .menu{display: none;}
+    .menu--bar{display: flex;}
     .title{font-size: 60px;}
     .sub--title{font-size: 20px;}
     .about,.services,.portfolios,.contacts{padding: 5rem 0 1rem;}
