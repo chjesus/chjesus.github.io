@@ -4,11 +4,15 @@
     const menuBar = document.getElementById('menu--bar');
     const iconAnimate = document.getElementById('icon');
     const menuMobile = document.getElementById('menu-mobile');
-
+    const timerAnimation = 5000;
+    const timerSubTitleInit = 200;
+    const timerAnimateConstruirInit = 300;
+    const speedAnimation = 70;
 
     let bool = true;
     let cont = 0;
     let validationAnimate = true; 
+    let validationLetter = true;
 
     AOS.init();
     
@@ -19,16 +23,17 @@
     });
 
     
-    var animationConstruir = () => {
+    var animationConstruir = (timerAnimation,subTitle) => {
         let arrayTitles = ['Desarrollador Web','Desarrollador JavaScript'];
-        let subTitle = document.getElementById('sub');
-        let subTitleText = subTitle.textContent;
-        let tamText = arrayTitles[0].length;
+        let pos = validationLetter ? 0 : 1;
+        let tamText = arrayTitles[pos].length;
         let sliceCont = 0;
+
+        let duractionStatic = (timerAnimation-(timerSubTitleInit+timerAnimateConstruirInit)) - (tamText*speedAnimation)*2;
 
         let textInit = setInterval(() => {
             if(tamText > sliceCont-1){
-                let word = arrayTitles[0];
+                let word = arrayTitles[pos];
                 let visible = word.slice(0,sliceCont);
                 sliceCont++;
                 subTitle.textContent = visible + '|';
@@ -37,38 +42,38 @@
                 clearInterval(textInit);
                 let time = setTimeout(() => {
                     animationDelete(subTitle);
-                },2000);
+                },duractionStatic-speedAnimation);
             }
-        },70);
+        },speedAnimation);
     }
 
     var animationDelete = (subTitle) => {
-        let tamText = subTitle.textContent.length;
-        console.log(tamText);
-        
+        let tamText = subTitle.textContent.length-1;
+
         let deleteInit = setInterval(()=>{
             if(tamText > -1){
                 let word = subTitle.textContent;
                 let visible = word.slice(0,tamText);
                 tamText--;
-                subTitle.textContent = visible;
+                subTitle.textContent = visible + '|';
             }else{
                 clearInterval(deleteInit);
+                validationLetter = validationLetter ? false : true; 
             }
-        },70);
+        },speedAnimation);
     }
 
     title.addEventListener('animationend',()=>{
         cont++;
         if(cont == 2){
             if(bool){
-                setTimeout(() => subTitle.classList.add('sub--title--active'),200);
-                setTimeout(() => animationConstruir(),300);
+                setTimeout(() => subTitle.classList.add('sub--title--active'),timerSubTitleInit);
+                setTimeout(() => animationConstruir(timerAnimation,subTitle),timerAnimateConstruirInit);
                 setTimeout(() => {
                     subTitle.classList.remove('sub--title--active')
                     title.classList.remove('title--animate');
                     title.classList.add('title--animate--reverse')
-                },5000)
+                },timerAnimation)
                 bool = false;
             }else{
                 title.classList.remove('title--animate--reverse');
@@ -98,7 +103,7 @@
     window.addEventListener('scroll',()=>{
         let skill = document.querySelector('.about--skill');
         console.log(skill.offsetTop);
-//        console.log(window.scrollY);
+//      console.log(window.scrollY);
 
         let menu = document.getElementById('nav');
         let scrollValue = document.documentElement.scrollTop;
