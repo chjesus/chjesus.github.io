@@ -1,13 +1,16 @@
 @media screen and (max-width:1024px){
-    .title{font-size: 95px;}
+    .title{font-size: 40px;}
     .about,
     .portfolios{padding: 5rem 0;}
     .portfolio{width: 48%;}
 }
 @media screen and (max-width: 768px){
+    body{padding: 0;}
+    .header{height: 100vh;}
     .nav .menu{display: none;}
     .menu--bar{display: flex;}
-    .title{font-size: 60px;}
+    .title{font-size: 45px;}
+    .title__content{margin: 0 2rem;}
     .sub--title{font-size: 20px;}
     .about,.services,.portfolios,.contacts{padding: 5rem 0 1rem;}
     .abouts{margin: 0;}
