@@ -1,36 +1,43 @@
 @media screen and (max-width:1024px){
-    .title{font-size: 40px;}
-    .about,
-    .portfolios{padding: 5rem 0;}
+    .title{font-size: 4rem;}
+    .about,.portfolios{padding: 5rem 0;}
     .portfolio{width: 48%;}
 }
 @media screen and (max-width: 768px){
+    html{font-size: 50%}
     body{padding: 0;}
-    .header{height: 100vh;}
-    .nav .menu{display: none;}
-    .menu--bar{display: flex;}
-    .title{font-size: 45px;}
-    .title__content{margin: 0 2rem;}
-    .sub--title{font-size: 20px;}
-    .about,.services,.portfolios,.contacts{padding: 5rem 0 1rem;}
+    .header{
+        height: 100vh;
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+    .wrapper{min-height: 18rem}
+    .title__content{margin: 0 1.8rem;}
+    .title{font-size: 5rem;}
+    .about,.services,.portfolios,.contacts{padding: 8rem 2rem;}
     .abouts{margin: 0;}
-    .abouts{width: 100% !important;}
-    .services .services--container{flex-wrap: nowrap;}
-    .portfolio{width: 100%;}
+    .portfolio__container{display: block;}
+    .certificado__container,.proyectos--container{width: 98%;}
+    .certificado__title,.proyecto__title{font-size: 3rem;}
+    .contacts{padding-top: 
+        16rem;
+        -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    }
     .contact{flex-wrap: wrap;}
     .contact--details{width: 48%;}
-    .service{width: 100%; margin: 2%;}
+    .service{width: 100%;}
+    .abouts{margin-top: 3rem;}
 }
 
 @media screen and (max-width: 480px){
-    .title{font-size: 40px;}
-    .sub--title{font-size: 12px;}
-    .abouts{padding: 30px 10px 0;}
-    .contact{flex-direction: column;}
-    .contact--details{width: 100%;}
+    html{font-size: 37.5%;}
+    .title{font-size: 4rem;}
+
 }
 
 @media screen and (max-width: 320px){
-    .title{font-size: 35px;}
-    .services--container{flex-wrap: wrap !important;}
+    .wrapper{min-height: 11.5rem;}
+    .title{font-size: 2.8rem;}
+    .certificado__container,.proyectos--container{margin: 0;width: 100%;}
 }
