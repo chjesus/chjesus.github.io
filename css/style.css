@@ -193,7 +193,7 @@ body{
 .title{
     font-family: "Diavlo";
     color: white;
-    font-size: 40px;
+    font-size: 4rem;
     padding: .5rem 0;
 }
 
@@ -226,7 +226,7 @@ body{
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 40px;
+    font-size: 4rem;
     position: relative;
     z-index: 4;
 }
