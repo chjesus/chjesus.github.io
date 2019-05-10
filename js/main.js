@@ -1,19 +1,63 @@
-(function(){
+(async function(){
     const $title = Array.prototype.slice.apply(document.getElementsByClassName('title'));
     const skillBars = document.querySelectorAll('.skill--bar')
-    const $badgeItems = document.querySelectorAll('.badge');
     const $menuItems = document.querySelectorAll('.nav--a');
     const $btnCheck = document.querySelector('.navigation--check');
-    const menuBar = document.getElementById('menu--bar');
-    const iconAnimate = document.getElementById('icon');
-    const menuMobile = document.getElementById('menu-mobile');
     const speedAnimation = 70;
 
-    let validationAnimate = true; 
     let validationLetter = false;
 
     window.onload = () =>{
         setTimeout(() => $title.forEach(animationInit), 500);
+    }
+
+    var certificateContainer = (date) => {
+        const $certificate = document.getElementById('certificates');
+        //console.log(date.careers)
+        date.careers.forEach((careers)=>{
+            const stringHTML = careersContainerTemplate(careers);
+            const html = document.implementation.createHTMLDocument();
+            html.body.innerHTML = stringHTML;
+            $certificate.appendChild(html.body.firstChild);
+        });
+        const $careersContainer = document.querySelectorAll('.careers__container');
+        $careersContainer.forEach((careers)=>{
+            const stringHTML = `<div class="courses__container"></div>`;
+            const html = document.implementation.createHTMLDocument();
+            html.body.innerHTML = stringHTML;
+            careers.appendChild(html.body.firstChild);
+            const $coursesContainer = careers.querySelector('.courses__container');
+            //console.log($coursesContainer)
+            date.courses.forEach((courses)=>{
+                //console.log(courses.career)
+                //console.log(careers.dataset.careers)
+                if(courses.career === careers.dataset.careers){
+                    const stringAux = coursesTemplate(courses)
+                    const htmlAux = document.implementation.createHTMLDocument();
+                    htmlAux.body.innerHTML = stringAux;
+                    $coursesContainer.appendChild(htmlAux.body.firstChild)
+                    //console.log(stringAux)
+                }
+            })
+        })
+    }
+    
+    var coursesTemplate = (courses) =>{
+        return (`<div class="courses">
+                    <div class="courses--image"><img src="${courses.badge}" alt="${courses.title}" /></div>
+                    <h3 class="courses--title">${courses.title}</h3>
+                 </div>
+        `);
+    }
+
+    var careersContainerTemplate = (careers) => {
+       return (`<div class="careers__container" data-careers="${careers.title}">
+                    <div class="badge">
+                        <div class="badge--image"><img src="${careers.golden_achievement}" alt="${careers.title}" /></div>
+                        <h3 class="badge--title">${careers.title}</h3>
+                        <i class="icon icon-plus"></i>
+                    </div>
+                </div>`);
     }
 
     var scroll = new SmoothScroll('a[href*="#"]',{
@@ -21,7 +65,6 @@
         speedAsDuration: true,
         easing: 'easeInOutQuad'
     });
-
 
     window.addEventListener('scroll',()=>{
         skillBars.forEach(element => {
@@ -37,23 +80,28 @@
         });
     })
     
-    $badgeItems.forEach($element => {
-        $element.addEventListener('click',()=>{
-            const $nextElement = $element.nextElementSibling;
-            const $lastChild = $element.querySelector('.icon')
-            console.log($lastChild)
-            if($nextElement.style.maxHeight){
-                $lastChild.classList.remove('icon-minus');
-                $lastChild.classList.add('icon-plus')
-                $nextElement.style.maxHeight = null;
-            }else{
-                $lastChild.classList.remove('icon-plus');
-                $lastChild.classList.add('icon-minus');
-                $nextElement.style.maxHeight = $nextElement.scrollHeight + "px";
-            }
-            
-        })
-    });
+    var badgeClicks = ()=>{
+        const $badgeItems = document.querySelectorAll('.badge');
+
+        $badgeItems.forEach($element => {
+            console.log("For: ",$element)
+            $element.addEventListener('click',()=>{
+                console.log("hola")
+                const $nextElement = $element.nextElementSibling;
+                const $lastChild = $element.querySelector('.icon')
+                if($nextElement.style.maxHeight){
+                    $lastChild.classList.remove('icon-minus');
+                    $lastChild.classList.add('icon-plus')
+                    $nextElement.style.maxHeight = null;
+                }else{
+                    $lastChild.classList.remove('icon-plus');
+                    $lastChild.classList.add('icon-minus');
+                    $nextElement.style.maxHeight = $nextElement.scrollHeight + "px";
+                }
+                
+            })
+        });
+    }
     
     $menuItems.forEach($element =>{
         $element.addEventListener('click',()=>{
@@ -112,40 +160,15 @@
         },speedAnimation);
     }
 
-    /*
-    menuBar.addEventListener('click',()=>{
-        validationAnimate ? (
-            iconAnimate.classList.remove('bar--animation--reverse'),
-            iconAnimate.classList.add('bar--animation'),
-            menuMobile.style.display = 'flex',
-            validationAnimate = false
-        )
-        : (
-            iconAnimate.classList.remove('bar--animation'),
-            iconAnimate.classList.add('bar--animation--reverse'),
-            menuMobile.style.display = 'none',
-            validationAnimate = true
-        );
+    async function getDate(url){
+        const date = await fetch(url);
+        const user = await date.json();
+        
+        return user.userData
+    }
 
-    })
-*/
-/*
-    window.addEventListener('scroll',()=>{
-        let skill = document.querySelector('.about--skill');
-        console.log(skill.offsetTop);
-//      console.log(window.scrollY);
+    const date = await getDate("https://platzi-user-api.jecsham.com/api/v1/getUserSummary/@chjesus");
 
-        let menu = document.getElementById('nav');
-        let scrollValue = document.documentElement.scrollTop;
-
-        scrollValue > 0 ? (
-            menu.style.backgroundColor = "#151515",
-            menu.style.padding = "1.2em 0",
-            menu.style.transition = ".3s linear"
-        ) : (
-            menu.style.backgroundColor = "transparent",
-            menu.style.padding = "1em 0",
-            menu.style.transition = ".3s linear"
-        )
-    })*/
+    certificateContainer(date);
+    badgeClicks();
 })();
