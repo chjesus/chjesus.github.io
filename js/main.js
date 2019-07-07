@@ -13,7 +13,6 @@
 
     var certificateContainer = (date) => {
         const $certificate = document.getElementById('certificates');
-        //console.log(date.careers)
         date.careers.forEach((careers)=>{
             const stringHTML = careersContainerTemplate(careers);
             const html = document.implementation.createHTMLDocument();
@@ -27,16 +26,12 @@
             html.body.innerHTML = stringHTML;
             careers.appendChild(html.body.firstChild);
             const $coursesContainer = careers.querySelector('.courses__container');
-            //console.log($coursesContainer)
             date.courses.forEach((courses)=>{
-                //console.log(courses.career)
-                //console.log(careers.dataset.careers)
                 if(courses.career === careers.dataset.careers){
                     const stringAux = coursesTemplate(courses)
                     const htmlAux = document.implementation.createHTMLDocument();
                     htmlAux.body.innerHTML = stringAux;
                     $coursesContainer.appendChild(htmlAux.body.firstChild)
-                    //console.log(stringAux)
                 }
             })
         })
