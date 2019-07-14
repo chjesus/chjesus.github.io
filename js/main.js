@@ -1,5 +1,6 @@
 (async function(){
     const $title = Array.prototype.slice.apply(document.getElementsByClassName('title'));
+    const $wrapper = document.getElementById('wrapper');
     const skillBars = document.querySelectorAll('.skill--bar')
     const $menuItems = document.querySelectorAll('.nav--a');
     const $btnCheck = document.querySelector('.navigation--check');
@@ -8,6 +9,8 @@
     let validationLetter = false;
 
     window.onload = () =>{
+        //$wrapper.style.height = $wrapper.offsetHeight + "px";
+        //$title.forEach($element => $element.textContent = "");
         setTimeout(() => $title.forEach(animationInit), 500);
     }
 
