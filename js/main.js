@@ -1,5 +1,6 @@
 (async function(){
     const $title = Array.prototype.slice.apply(document.getElementsByClassName('title'));
+    const $wrapper = document.getElementById('wrapper');
     const skillBars = document.querySelectorAll('.skill--bar')
     const $menuItems = document.querySelectorAll('.nav--a');
     const $btnCheck = document.querySelector('.navigation--check');
@@ -8,12 +9,13 @@
     let validationLetter = false;
 
     window.onload = () =>{
+        //$wrapper.style.height = $wrapper.offsetHeight + "px";
+        //$title.forEach($element => $element.textContent = "");
         setTimeout(() => $title.forEach(animationInit), 500);
     }
 
     var certificateContainer = (date) => {
         const $certificate = document.getElementById('certificates');
-        //console.log(date.careers)
         date.careers.forEach((careers)=>{
             const stringHTML = careersContainerTemplate(careers);
             const html = document.implementation.createHTMLDocument();
@@ -27,16 +29,12 @@
             html.body.innerHTML = stringHTML;
             careers.appendChild(html.body.firstChild);
             const $coursesContainer = careers.querySelector('.courses__container');
-            //console.log($coursesContainer)
             date.courses.forEach((courses)=>{
-                //console.log(courses.career)
-                //console.log(careers.dataset.careers)
                 if(courses.career === careers.dataset.careers){
                     const stringAux = coursesTemplate(courses)
                     const htmlAux = document.implementation.createHTMLDocument();
                     htmlAux.body.innerHTML = stringAux;
                     $coursesContainer.appendChild(htmlAux.body.firstChild)
-                    //console.log(stringAux)
                 }
             })
         })
@@ -84,7 +82,7 @@
         const $badgeItems = document.querySelectorAll('.badge');
 
         $badgeItems.forEach($element => {
-            console.log("For: ",$element)
+            
             $element.addEventListener('click',()=>{
                 console.log("hola")
                 const $nextElement = $element.nextElementSibling;
@@ -97,8 +95,7 @@
                     $lastChild.classList.remove('icon-plus');
                     $lastChild.classList.add('icon-minus');
                     $nextElement.style.maxHeight = $nextElement.scrollHeight + "px";
-                }
-                
+                }    
             })
         });
     }
@@ -106,7 +103,6 @@
     $menuItems.forEach($element =>{
         $element.addEventListener('click',()=>{
             $btnCheck.checked = 0;
-            console.log($element)
         })
     });
 
