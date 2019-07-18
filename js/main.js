@@ -82,7 +82,7 @@
         const $badgeItems = document.querySelectorAll('.badge');
 
         $badgeItems.forEach($element => {
-            console.log("For: ",$element)
+            
             $element.addEventListener('click',()=>{
                 console.log("hola")
                 const $nextElement = $element.nextElementSibling;
@@ -95,8 +95,7 @@
                     $lastChild.classList.remove('icon-plus');
                     $lastChild.classList.add('icon-minus');
                     $nextElement.style.maxHeight = $nextElement.scrollHeight + "px";
-                }
-                
+                }    
             })
         });
     }
@@ -104,7 +103,6 @@
     $menuItems.forEach($element =>{
         $element.addEventListener('click',()=>{
             $btnCheck.checked = 0;
-            console.log($element)
         })
     });
 
