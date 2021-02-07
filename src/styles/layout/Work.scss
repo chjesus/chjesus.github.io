@@ -1,0 +1,71 @@
+.work {
+  padding: 4rem 0rem;
+  &-item {
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    &_img {
+      position: relative;
+      z-index: 0;
+    }
+    &_description {
+      position: absolute;
+      z-index: 2;
+      background-color: #fff;
+      left: 10px;
+      top: 10px;
+      bottom: 10px;
+      right: 10px;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 1rem;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s;
+      button {
+        // text-align: right;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+      }
+      p {
+        font-size: 13px;
+        font-weight: 400;
+      }
+      h2 {
+        text-align: left;
+        color: #1461ff;
+        font-weight: 400;
+        font-size: 16px;
+        margin-top: 5px;
+        text-transform: capitalize;
+      }
+    }
+    &:hover {
+      box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+      .work-item_description {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  &-certificate_item {
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.certificate_title {
+  font-size: 18px;
+  color: #1461ff;
+}
+
+.certificate_content {
+  // letter-spacing: 0.5px;
+
+  span,
+  a {
+    padding-left: 0.2rem;
+  }
+}

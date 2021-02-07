@@ -1,0 +1,42 @@
+.experience {
+  padding: 3rem;
+  background-image: url("../../assets/testi-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  // background-position: center center;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(
+      -45deg,
+      rgba(88, 195, 255, 0.5) 0,
+      rgba(0, 77, 230, 0.5) 40%,
+      rgba(0, 59, 177, 0.5) 100%
+    );
+  }
+  &_items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    // border-right: 1px solid #fff;
+
+    span {
+      font-size: 30px;
+      font-weight: 800;
+      font-style: italic;
+    }
+    h5 {
+      font-size: 16px;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+  }
+}

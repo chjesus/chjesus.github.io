@@ -1,0 +1,26 @@
+.socials {
+  a:last-child {
+    .ant-btn-icon-only {
+      margin: 0;
+    }
+  }
+  .ant-btn-icon-only {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    line-height: 38px;
+    margin-right: 15px;
+    border-color: #fff;
+    transition: all 0.3s;
+    &:hover {
+      background: #fff;
+      & > * {
+        color: #003bb1;
+      }
+    }
+    & > * {
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+}

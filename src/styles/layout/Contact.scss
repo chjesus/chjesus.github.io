@@ -1,0 +1,21 @@
+.contact {
+  padding: 4rem 2rem;
+  background-color: #fafafa;
+  @media (min-width: 992px) {
+    padding: 4rem 6rem;
+  }
+  &_item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f7f7f7;
+    background-color: #fff;
+    &-description {
+      padding-left: 1.5rem;
+      h3 {
+        text-align: left;
+      }
+    }
+  }
+}

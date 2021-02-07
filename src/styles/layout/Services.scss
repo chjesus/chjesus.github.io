@@ -1,0 +1,29 @@
+.service {
+  background-color: #fafafa;
+  padding: 4rem 2rem;
+  @media (min-width: 992px) {
+    padding: 4rem 6rem;
+  }
+
+  &_list {
+    .item {
+      padding: 1.5rem;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f7f7f7;
+      background-color: #fff;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s;
+      border-bottom: 4px solid transparent;
+      p {
+        color: #777;
+      }
+      &:hover {
+        overflow: hidden;
+        position: relative;
+        transform: translateY(-5px);
+        border-bottom: 4px solid #003bb1;
+      }
+    }
+  }
+}

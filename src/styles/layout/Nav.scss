@@ -1,0 +1,53 @@
+.nav_bar {
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  z-index: 12;
+  transition: all 0.3s;
+  @media (max-width: 576px) {
+    padding: 12px 16px;
+  }
+
+  @media (min-width: 576px) {
+    padding: 12px 16px;
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  &-title {
+    color: white;
+  }
+}
+
+.menu-shrink {
+  transition: all 0.3s;
+  padding: 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+  .nav_bar-title {
+    color: #000;
+  }
+  .ant-menu-item {
+    .link {
+      color: #000;
+    }
+  }
+  .ant-menu-dark.ant-menu-horizontal {
+    & > .ant-menu-item:hover {
+      .link {
+        color: rgba(0, 59, 177, 1) !important;
+      }
+    }
+  }
+  .ant-menu-dark .ant-menu-item-selected {
+    color: rgba(0, 59, 177, 1) !important;
+  }
+}

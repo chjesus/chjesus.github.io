@@ -1,0 +1,71 @@
+// Font Size
+@for $i from 0 through $sizes {
+  .font-s-#{$i} {
+    font-size: $i + px;
+  }
+}
+
+// Font Weight
+@for $i from 1 through $fwlength {
+  .font-w-#{$i * 100} {
+    font-weight: ($i * 100);
+  }
+}
+
+// Text Align
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Text Transform class
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+// Display
+
+.d-none {
+  display: none;
+}
+.d-flex {
+  display: flex;
+}
+.d-block {
+  display: block;
+}
+.d-grid {
+  display: grid;
+}
+.d-inline {
+  display: inline;
+}
+.d-inline-flex {
+  display: inline-flex;
+}
+.d-inline-block {
+  display: inline-block;
+}
