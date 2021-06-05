@@ -1,8 +1,8 @@
 import React from 'react';
-import Home from './views/Home';
+import Landing from './views/Landing';
 
-function App() {
-  return <Home />;
-}
+const App: React.FC = () => {
+  return <Landing />;
+};
 
 export default App;
