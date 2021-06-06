@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { Row, Col } from 'antd';
-import { createFromIconfontCN } from '@ant-design/icons';
 
 import Button from '../../../../components/Button';
+import Service from '../../../../components/Service';
 
 import {
   Container,
@@ -11,13 +11,14 @@ import {
   TitleH2,
   Span,
 } from '../../../../utils/styledComponents';
+
 import { Div, Text, Figure, Img, TagsContainer, Tag } from './styledAbout';
+
+import { IconFont } from '../../../../utils/IconFont';
 
 import Foto from '../../../../assets/images/foto.jpg';
 
-const IconFont = createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_2332453_t5bp4xuo90p.js',
-});
+import { Services } from '../../../../utils/Data';
 
 const AboutMe: React.FC = () => {
   return (
@@ -48,6 +49,18 @@ const AboutMe: React.FC = () => {
               </TagsContainer>
             </Div>
           </Col>
+        </Row>
+        <Row gutter={[0, 48]} justify="center" align="middle">
+          {Services.map((service) => (
+            <Col span="16" key={service.id}>
+              <Service
+                img={service.img}
+                title={service.title}
+                content={service.content}
+                position={service.position}
+              />
+            </Col>
+          ))}
         </Row>
       </Container>
     </DivContainer>
