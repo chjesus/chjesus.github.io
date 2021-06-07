@@ -31,4 +31,16 @@ export const TitleGreet = styled.span`
   color: var(--color-normal-title);
 `;
 
-export const TitleName = styled.h1``;
+export const HomeH1 = styled.h1`
+  font-size: 56px;
+  text-align: center;
+  margin: 0;
+  color: var(--color-normal-title);
+`;
+
+export const HomeH2 = styled.h2`
+  font-size: 36px;
+  text-align: center;
+  margin: 0;
+  color: var(--color-normal-title);
+`;

@@ -7,14 +7,15 @@ import { Row, Col } from 'antd';
 import Button from '../../../../components/Button';
 import Socials from '../../../../components/Socials';
 
+import { Container, Span, Text } from '../../../../utils/styledComponents';
 import {
-  Container,
-  TitleH1,
-  TitleH2,
-  Span,
-  Text,
-} from '../../../../utils/styledComponents';
-import { HomeContainer, HomeDiv, TitleGreet, HomeSocials } from './styledHome';
+  HomeContainer,
+  HomeDiv,
+  HomeH1,
+  HomeH2,
+  TitleGreet,
+  HomeSocials,
+} from './styledHome';
 
 const Home: React.FC = () => {
   return (
@@ -28,9 +29,9 @@ const Home: React.FC = () => {
           </Row>
           <Row>
             <Col span="auto">
-              <TitleH1>
+              <HomeH1>
                 I’m <Span>Jesus Chacon</Span>
-              </TitleH1>
+              </HomeH1>
             </Col>
           </Row>
           <Row>
@@ -44,7 +45,7 @@ const Home: React.FC = () => {
           </Row>
           <Row>
             <Col span="auto">
-              <TitleH2>
+              <HomeH2>
                 <Typed
                   strings={['Frontend Developer', 'Web Development']}
                   typeSpeed={40}
@@ -52,13 +53,13 @@ const Home: React.FC = () => {
                   backDelay={1500}
                   loop
                 />
-              </TitleH2>
+              </HomeH2>
             </Col>
           </Row>
         </HomeDiv>
         <HomeDiv border={false}>
           <HomeSocials>
-            <Button type="primary" shape="round" value="Hire me" />
+            <Button type="text" shape="round" size="large" value="Hire me" />
             <Socials />
           </HomeSocials>
         </HomeDiv>

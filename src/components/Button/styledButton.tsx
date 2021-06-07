@@ -1,31 +1,33 @@
 import styled from 'styled-components';
 import { Button, ButtonProps } from 'antd';
 
-// interface Attributes {
-//   type:
-//     | 'default'
-//     | 'link'
-//     | 'text'
-//     | 'ghost'
-//     | 'primary'
-//     | 'dashed'
-//     | undefined;
-// }
-
 const StylesTypeButton = (props: ButtonProps) => {
-  const size = props.size === 'large' ? 'var(--bg-btn)' : 'transparent';
-  const bgColor = props.type !== 'link' ? size : 'transparent';
+  const bgColor =
+    props.shape === 'round'
+      ? props.type === 'text'
+        ? 'var(--bg-btn)'
+        : 'transparent'
+      : 'transparent';
+
+  const borderColor =
+    props.shape === 'round'
+      ? props.type === 'text'
+        ? 'transparent'
+        : 'var(--color-border)'
+      : 'transparent';
+
   return `
     background-color: ${bgColor};
-    border-color: ${bgColor};
+    border-color: ${borderColor};
   `;
 };
 
 export const Btn = styled(Button)`
   ${StylesTypeButton}
-  color: var(--color-text);
-  height: auto !important;
-  font-size: 18px !important;
+  color: ${(props) =>
+    props.shape === 'round' && props.type === 'link'
+      ? 'var(--color-link)'
+      : 'var(--color-text)'};
   display: inline-block;
   span {
     display: flex;

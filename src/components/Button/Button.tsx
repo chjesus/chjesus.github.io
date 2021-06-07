@@ -1,25 +1,21 @@
 import React from 'react';
+
+import { ButtonShape, ButtonSize, ButtonType } from 'antd/lib/button';
 import { Btn } from './styledButton';
 
-interface PropsButton {
-  type:
-    | 'default'
-    | 'link'
-    | 'text'
-    | 'ghost'
-    | 'primary'
-    | 'dashed'
-    | undefined;
-  shape: 'circle' | 'round' | undefined;
+interface PropsType {
+  type: ButtonType;
+  shape: ButtonShape;
+  size: ButtonSize;
   value?: string;
   icon?: React.ReactNode;
 }
 
-export const Button: React.FC<PropsButton> = (props) => {
-  const { type, value, shape, icon } = props;
+export const Button: React.FC<PropsType> = (props) => {
+  const { type, value, shape, size, icon } = props;
 
   return (
-    <Btn type={type} shape={shape} size="large" icon={icon}>
+    <Btn type={type} shape={shape} size={size} icon={icon}>
       {value}
     </Btn>
   );

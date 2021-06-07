@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Row, Col } from 'antd';
+import { Row, Col, Divider } from 'antd';
 
 import Button from '../../../../components/Button';
 import Service from '../../../../components/Service';
@@ -8,7 +8,7 @@ import Service from '../../../../components/Service';
 import {
   Container,
   DivContainer,
-  TitleH2,
+  H2,
   Span,
 } from '../../../../utils/styledComponents';
 
@@ -22,18 +22,31 @@ import { Services } from '../../../../utils/Data';
 
 const AboutMe: React.FC = () => {
   return (
-    <DivContainer>
+    <DivContainer color="hight">
       <Container>
-        <TitleH2>
+        <H2>
           About <Span>Me</Span>
-        </TitleH2>
-        <Row gutter={[104, 104]} justify="center" align="middle">
-          <Col span="8">
+        </H2>
+        <Divider orientation="left" />
+        <Row gutter={[16, 32]} justify="center" align="middle">
+          <Col
+            xs={{ span: '18' }}
+            sm={{ span: '14' }}
+            md={{ span: '10' }}
+            lg={{ span: '10' }}
+            xl={{ span: '8' }}
+          >
             <Figure>
               <Img src={Foto} />
             </Figure>
           </Col>
-          <Col span="11">
+          <Col
+            xs={{ span: '24' }}
+            sm={{ span: '24' }}
+            md={{ span: '20' }}
+            lg={{ span: '13', offset: '1' }}
+            xl={{ span: '12', offset: '2' }}
+          >
             <Div>
               <Text>
                 A self-driven software engineer. Able to effectively self-manage
@@ -45,18 +58,20 @@ const AboutMe: React.FC = () => {
                 <Tag icon={<IconFont type="icon-email" />}>
                   chjesuscode@gmail.com
                 </Tag>
-                <Button type="primary" shape="round" value="Resume" />
+                <Button type="text" shape="round" size="large" value="Resume" />
               </TagsContainer>
             </Div>
           </Col>
         </Row>
+        <Divider orientation="left" />
         <Row gutter={[0, 48]} justify="center" align="middle">
           {Services.map((service) => (
-            <Col span="16" key={service.id}>
+            <Col lg={{ span: '18' }} xl={{ span: '16' }} key={service.id}>
               <Service
                 img={service.img}
                 title={service.title}
                 content={service.content}
+                icon={service.icon}
                 position={service.position}
               />
             </Col>

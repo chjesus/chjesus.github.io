@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { IconFont } from '../../utils/IconFont';
 interface Attributes {
   band: boolean;
 }
@@ -12,17 +12,10 @@ export const Div = styled.div<Attributes>`
   border-color: var(--color-border);
 `;
 
-export const Title = styled.h2<Attributes>`
-  font-size: 36px;
-  color: var(--color-normal-title);
-  display: flex;
-  justify-content: ${(props) => (props.band ? 'flex-end' : 'flex-start')};
-  align-items: center;
-  span {
-    font-size: 50px;
-    color: var(--color-custom-icon);
-    text-align: right;
-  }
+export const Icon = styled(IconFont)`
+  font-size: 50px;
+  color: var(--color-custom-icon);
+  text-align: right;
 `;
 
 export const Text = styled.p<Attributes>`

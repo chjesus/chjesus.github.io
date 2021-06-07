@@ -1,13 +1,25 @@
 import styled from 'styled-components';
 import { Tag as TagAntd } from 'antd';
 
+import { screens } from '../../../../utils/BreakPoints';
 export const Div = styled.div`
   border-left: solid;
   border-width: 5px;
-  padding-left: 55px;
   border-color: var(--color-border);
   padding-top: 10px;
   padding-bottom: 10px;
+
+  ${screens.xs} {
+    padding-left: 20px;
+  }
+
+  ${screens.sm} {
+    padding-left: 20px;
+  }
+
+  ${screens.md} {
+    padding-left: 55px;
+  }
 `;
 
 export const Text = styled.p`
@@ -30,14 +42,6 @@ export const Img = styled.img`
   position: relative;
   top: 25px;
   left: 25px;
-  background-color: red;
-  ::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: red;
-    border: 4px solid var(--color-border-photo);
-  }
 `;
 
 export const TagsContainer = styled.div`
@@ -58,3 +62,5 @@ export const Tag = styled(TagAntd)`
     color: #cccccc;
   }
 `;
+
+export const AboutContainer = styled.div``;

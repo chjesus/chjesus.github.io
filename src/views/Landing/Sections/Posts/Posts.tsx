@@ -9,18 +9,18 @@ import {
   H2,
 } from '../../../../utils/styledComponents';
 
-import { Projects } from '../../../../utils/Data';
+import { PostsList } from '../../../../utils/Data';
 
-const Portfolio: React.FC = () => {
+const Posts: React.FC = () => {
   return (
-    <DivContainer color="low">
+    <DivContainer color="hight">
       <Container>
-        <H2>Portfolio</H2>
+        <H2>Posts</H2>
         <Divider orientation="left" />
         <Row gutter={[32, 32]}>
-          {Projects.map((project) => (
-            <Col key={project.id} xs={24} sm={24} md={12} lg={12} xl={8}>
-              <Card type="project" />
+          {PostsList.map((post) => (
+            <Col key={post.id} xs={24} sm={24} md={12} lg={12} xl={8}>
+              <Card type="posts" />
             </Col>
           ))}
         </Row>
@@ -29,4 +29,4 @@ const Portfolio: React.FC = () => {
   );
 };
 
-export default Portfolio;
+export default Posts;

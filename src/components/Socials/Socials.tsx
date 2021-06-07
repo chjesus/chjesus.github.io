@@ -6,6 +6,7 @@ import {
   TwitterSquareFilled,
 } from '@ant-design/icons';
 
+import { Row, Col } from 'antd';
 import Button from '../Button';
 
 import { Div } from './styledSocials';
@@ -13,9 +14,32 @@ import { Div } from './styledSocials';
 const Socials: React.FC = () => {
   return (
     <Div>
-      <Button type="link" shape="circle" icon={<GithubOutlined />} />
-      <Button type="link" shape="circle" icon={<LinkedinFilled />} />
-      <Button type="link" shape="circle" icon={<TwitterSquareFilled />} />
+      <Row gutter={[8, 0]} justify="center">
+        <Col span="auto">
+          <Button
+            type="link"
+            shape="circle"
+            size="small"
+            icon={<GithubOutlined />}
+          />
+        </Col>
+        <Col span="auto">
+          <Button
+            type="link"
+            shape="circle"
+            size="small"
+            icon={<LinkedinFilled />}
+          />
+        </Col>
+        <Col span="auto">
+          <Button
+            type="link"
+            shape="circle"
+            size="small"
+            icon={<TwitterSquareFilled />}
+          />
+        </Col>
+      </Row>
     </Div>
   );
 };
