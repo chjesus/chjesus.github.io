@@ -26,6 +26,10 @@ const Experience: React.FC = () => {
           {ExperienceList.map((experience, index) => (
             <TimelineItem key={experience.id}>
               <CardExperience
+                title={experience.title}
+                dateStart={experience.date_start}
+                dateEnd={experience.date_end}
+                content={experience.content}
                 position={index % 2 !== 0 ? (md ? 'right' : 'left') : 'left'}
               />
             </TimelineItem>

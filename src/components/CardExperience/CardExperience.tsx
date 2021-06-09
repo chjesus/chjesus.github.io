@@ -2,13 +2,17 @@ import React from 'react';
 
 import { Row, Col } from 'antd';
 
-import { Div, Icon, H4, H6, Text } from './styledCardExperience';
+import { Div, Icon, H3, H4, Text } from './styledCardExperience';
 
 interface PropsType {
+  title: string;
+  dateStart: string;
+  dateEnd: string;
+  content: string;
   position: string;
 }
 const CardExperience: React.FC<PropsType> = (props) => {
-  const { position } = props;
+  const { title, dateStart, dateEnd, content, position } = props;
   const band = position === 'left';
   const iconLeft = band ? 1 : 2;
   const iconRight = band ? 2 : 1;
@@ -20,12 +24,11 @@ const CardExperience: React.FC<PropsType> = (props) => {
           <Icon type="icon-work" />
         </Col>
         <Col xs={21} sm={22} md={20} lg={21} order={iconRight}>
-          <H4>Villartechnologies</H4>
-          <H6>February 2020 - April 2020</H6>
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. At mattis
-            libero, tellus congue ultrices dictum aliquet purus.
-          </Text>
+          <H3>{title}</H3>
+          <H4>
+            {dateStart} - {dateEnd}
+          </H4>
+          <Text>{content}</Text>
         </Col>
       </Row>
     </Div>

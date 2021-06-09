@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Card as CardAntd } from 'antd';
-
+import { screens } from '../../utils/BreakPoints';
 interface AttributesTypes {
   card: string;
 }
@@ -45,7 +45,10 @@ export const CardP = styled(CardAntd)<AttributesTypes>`
   }
 `;
 
-export const Img = styled.img``;
+export const Img = styled.img`
+  width: 100%;
+  height: 100%;
+`;
 
 export const DivContent = styled.div`
   padding: 0 20px;
@@ -54,13 +57,18 @@ export const DivContent = styled.div`
   border-color: var(--color-border);
 `;
 
-export const H4 = styled.h4`
+export const H3 = styled.h3`
   font-size: 18px;
+  font-weight: 500;
   color: var(--color-text);
 `;
 
 export const Text = styled.p`
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 200;
   color: var(--color-text);
+
+  ${screens.lg} {
+    font-size: 18px;
+  }
 `;

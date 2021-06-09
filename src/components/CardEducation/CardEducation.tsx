@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 
-import { Div, Span, H3, H5 } from './styledCardEducation';
-import { Text } from '../../utils/styledComponents';
+import { Div, Span, H3, H4, Text } from './styledCardEducation';
 
 interface Education {
   title: string;
@@ -20,9 +19,9 @@ const CardEducation: React.FC<Education> = (props) => {
           <H3>{title}</H3>
         </Col>
         <Col span="24">
-          <H5>
+          <H4>
             {dateStart} - {dateEnd}
-          </H5>
+          </H4>
         </Col>
         <Col span="24">
           <Text>{content}</Text>

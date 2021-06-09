@@ -85,16 +85,30 @@ export const Span = styled.span`
 
 export const H3 = styled.h3`
   font-size: 24px;
+  font-weight: normal;
   text-align: center;
   margin: 0;
   color: var(--color-normal-title);
   text-align: left;
 `;
 
-export const H5 = styled.h5`
+export const H4 = styled.h4`
   font-size: 14px;
+  font-weight: normal;
   text-align: left;
   margin: 0;
   color: var(--color-normal-title);
   opacity: 0.54;
+`;
+
+export const Text = styled.p`
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+  color: var(--color-text);
+  font-style: normal;
+
+  ${screens.lg} {
+    font-size: 18px;
+  }
 `;

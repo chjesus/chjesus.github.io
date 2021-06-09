@@ -71,14 +71,14 @@ export const ExperienceList = [
     id: 1,
     title: 'Freelancer in Upwork',
     date_start: 'June 2020',
-    date_end: 'April 2020',
+    date_end: 'April 2021',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. At mattis libero, tellus congue ultrices dictum aliquet purus.',
   },
   {
     id: 2,
     title: 'Zalvadora',
-    date_start: 'April 2021',
+    date_start: 'May 2021',
     date_end: 'Present',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. At mattis libero, tellus congue ultrices dictum aliquet purus.',

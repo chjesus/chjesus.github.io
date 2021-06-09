@@ -9,7 +9,7 @@ export const Div = styled.div`
   border-radius: 10px;
 
   ${screens.xs} {
-    padding: 10px;
+    padding: 12px;
   }
 
   ${screens.sm} {
@@ -25,18 +25,19 @@ export const Div = styled.div`
   }
 `;
 
-export const H4 = styled.h4`
-  font-size: 18px;
+export const H3 = styled.h3`
+  font-size: 24px;
   margin-bottom: 10px;
   color: var(--color-normal-title);
 `;
 
-export const H6 = styled.h6`
-  font-size: 13px;
-  margin-bottom: 10px;
-  color: #cccccc;
-  font-weight: 200;
+export const H4 = styled.h4`
+  color: var(--color-normal-title);
+  font-size: 14px;
+  font-weight: normal;
   font-style: normal;
+  margin-bottom: 10px;
+  opacity: 0.54;
 `;
 
 export const Icon = styled(IconFont)`
@@ -45,9 +46,13 @@ export const Icon = styled(IconFont)`
 `;
 
 export const Text = styled.p`
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
   margin: 0;
   color: var(--color-text);
   font-style: normal;
+
+  ${screens.lg} {
+    font-size: 18px;
+  }
 `;

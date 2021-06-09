@@ -7,7 +7,7 @@ import { Row, Col } from 'antd';
 import Button from '../../../../components/Button';
 import Socials from '../../../../components/Socials';
 
-import { Container, Span, Text } from '../../../../utils/styledComponents';
+import { Container, Span } from '../../../../utils/styledComponents';
 import {
   HomeContainer,
   HomeDiv,
@@ -15,6 +15,7 @@ import {
   HomeH2,
   TitleGreet,
   HomeSocials,
+  Text,
 } from './styledHome';
 
 const Home: React.FC = () => {
@@ -35,7 +36,12 @@ const Home: React.FC = () => {
             </Col>
           </Row>
           <Row>
-            <Col span={8}>
+            <Col
+              xs={{ span: '24' }}
+              md={{ span: '16' }}
+              lg={{ span: '14' }}
+              xl={{ span: '8' }}
+            >
               <Text>
                 I specialize in front-end development. I am creative, proactive
                 and committed with a passion for making things beautiful and

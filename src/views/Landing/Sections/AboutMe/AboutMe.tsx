@@ -37,13 +37,13 @@ const AboutMe: React.FC = () => {
             xl={{ span: '8' }}
           >
             <Figure>
-              <Img src={Foto} />
+              <Img src={Foto} alt="photo-profile" />
             </Figure>
           </Col>
           <Col
             xs={{ span: '24' }}
             sm={{ span: '24' }}
-            md={{ span: '20' }}
+            md={{ span: '24' }}
             lg={{ span: '13', offset: '1' }}
             xl={{ span: '12', offset: '2' }}
           >

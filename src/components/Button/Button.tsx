@@ -1,21 +1,15 @@
 import React from 'react';
-
-import { ButtonShape, ButtonSize, ButtonType } from 'antd/lib/button';
+import { ButtonProps } from 'antd';
 import { Btn } from './styledButton';
-
-interface PropsType {
-  type: ButtonType;
-  shape: ButtonShape;
-  size: ButtonSize;
-  value?: string;
-  icon?: React.ReactNode;
+interface PropsType extends ButtonProps {
+  showDrawer?: React.MouseEventHandler;
 }
 
 export const Button: React.FC<PropsType> = (props) => {
-  const { type, value, shape, size, icon } = props;
+  const { type, value, shape, size, icon, showDrawer } = props;
 
   return (
-    <Btn type={type} shape={shape} size={size} icon={icon}>
+    <Btn type={type} shape={shape} size={size} icon={icon} onClick={showDrawer}>
       {value}
     </Btn>
   );

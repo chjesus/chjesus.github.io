@@ -21,21 +21,21 @@ const Service: React.FC<PropsType> = (props) => {
 
   return (
     <Div band={band}>
-      <Row gutter={[64, 0]} align="middle">
+      <Row gutter={[48, 0]} align="middle" justify="end">
         <Col
           xs={{ span: '24', order: 1 }}
           sm={{ span: '24', order: 1 }}
-          md={{ span: '24', order: 1 }}
+          md={{ span: '10', order: iconRight }}
           lg={{ span: '8', order: iconRight }}
         >
-          <Figure>
-            <Img src={img} />
+          <Figure band={band}>
+            <Img src={img} alt="logo-service"/>
           </Figure>
         </Col>
         <Col
           xs={{ span: '24', order: 2 }}
           sm={{ span: '24', order: 2 }}
-          md={{ span: '24', order: 2 }}
+          md={{ span: '14', order: iconLeft }}
           lg={{ span: '16', order: iconLeft }}
         >
           <Row gutter={[24, 24]} align="middle" justify={justify}>

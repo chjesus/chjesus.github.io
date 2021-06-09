@@ -25,6 +25,7 @@ export const Div = styled.div`
 export const Text = styled.p`
   color: var(--color-text);
   font-size: 18px;
+  font-weight: 400;
 `;
 
 export const Figure = styled.figure`
@@ -55,6 +56,7 @@ export const Tag = styled(TagAntd)`
   background-color: transparent;
   border: 0;
   font-size: 18px;
+  font-weight: 300;
   span {
     color: var(--color-icon);
   }

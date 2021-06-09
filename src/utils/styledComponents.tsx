@@ -38,10 +38,14 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
-  font-size: 36px;
+  font-size: 24px;
   text-align: center;
   margin-bottom: 0;
   color: var(--color-normal-title);
+  font-weight: 400;
+  ${screens.md} {
+    font-size: 36px;
+  }
 `;
 
 export const H3 = styled.h3`
@@ -76,6 +80,8 @@ export const Text = styled.p`
   font-size: 18px;
   color: var(--color-normal-title);
   margin: 0;
+  font-weight: 300;
+  font-style: normal;
 `;
 
 export const Span = styled.span`
@@ -105,4 +111,8 @@ export const DivContainer = styled.div`
   ${screens.xl} {
     padding: 100px 0;
   }
+`;
+
+export const DivScrollBar = styled.div`
+  display: none;
 `;
