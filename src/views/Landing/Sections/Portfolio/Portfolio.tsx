@@ -20,7 +20,14 @@ const Portfolio: React.FC = () => {
         <Row gutter={[32, 32]}>
           {Projects.map((project) => (
             <Col key={project.id} xs={24} sm={24} md={12} lg={12} xl={8}>
-              <Card type="project" />
+              <Card
+                title={project.title}
+                content={project.content}
+                url={project.url}
+                img={project.img}
+                tags={project.tags}
+                type="project"
+              />
             </Col>
           ))}
         </Row>

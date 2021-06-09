@@ -87,32 +87,71 @@ export const ExperienceList = [
 
 export const Projects = [
   {
-    id: 0,
-    title: 'Lorem ipsum dolor sit amet',
+    id: 3,
+    title: 'Divain Samples',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet ut viverra fermentum vitae eget gravida.',
-    img: 'https://res.cloudinary.com/chjesus/image/upload/v1623035018/CV/Projects/the-movie-1_orxjab.png',
+      'Tienda para la seleccion de diversas muestras de perfumes para hombre, mujer, unisex',
+    img: 'https://res.cloudinary.com/chjesus/image/upload/v1623210003/CV/Projects/Divain_-_Collections_hombre_1_ullfwa.png',
+    url: 'https://divainsamples.com/',
+    tags: [
+      'react',
+      'react-router',
+      'connected-react-router',
+      'ant design',
+      'react-i18next',
+      'i18next',
+      'axios',
+      'redux',
+      'redux-thunk',
+      'redux-devtools',
+      'sass',
+      'css',
+      'react-countdown',
+    ],
   },
   {
     id: 1,
-    title: 'Lorem ipsum dolor sit amet',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet ut viverra fermentum vitae eget gravida.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet ut viverra fermentum vitae eget gravida.',
-    img: 'https://res.cloudinary.com/chjesus/image/upload/v1623035018/CV/Projects/the-movie-1_orxjab.png',
+    title: 'CRUD Badges',
+    content: 'Un crud basico de insignias para los usuarios',
+    img: 'https://res.cloudinary.com/chjesus/image/upload/v1623211665/CV/Projects/user-badge_pq4cry.png',
+    url: 'https://chjesus.github.io/user-badges',
+    tags: ['react', 'react-router', 'sass', 'css', 'firebase'],
   },
   {
     id: 2,
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Landing Page',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet ut viverra fermentum vitae eget gravida.',
-    img: 'https://res.cloudinary.com/chjesus/image/upload/v1623035018/CV/Projects/the-movie-1_orxjab.png',
+      'Construcción de mano de aterrizaje profesional y optimizada a mano usando React y styled-components',
+    img: 'https://res.cloudinary.com/chjesus/image/upload/v1623212028/CV/Projects/React_App_1_mkzube.png',
+    url: '',
+    tags: [
+      'react',
+      'ant design',
+      'styled-components',
+      'typescript',
+      'i18next',
+      'axios',
+      'react-custom-scrollbars',
+      'sass',
+      'react-scroll',
+    ],
+  },
+  {
+    id: 2,
+    title: 'Crypto Prices',
+    content:
+      'Sitio web usando Vuejs para listar las 20 mejores criptomonedas mas populares en el mercado usando la api de coincap',
+    img: 'https://res.cloudinary.com/chjesus/image/upload/v1623208281/CV/Projects/crypto-prices_hgnikg.png',
+    url: 'https://prices-crypto.netlify.app/',
+    tags: ['vue', 'vue-router', 'tailwindcss', 'numeral'],
   },
   {
     id: 3,
-    title: 'Lorem ipsum dolor sit amet',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet ut viverra fermentum vitae eget gravida.',
-    img: 'https://res.cloudinary.com/chjesus/image/upload/v1623035018/CV/Projects/the-movie-1_orxjab.png',
+    title: 'Search users - Github',
+    content: 'Un buscador de usuarios usando la api de github',
+    img: 'https://res.cloudinary.com/chjesus/image/upload/v1623207141/CV/Projects/search-user-github_mu8qgr.png',
+    url: 'https://chjesus.github.io/search-user-github/',
+    tags: ['react', 'sass', 'ant design', 'css'],
   },
 ];
 

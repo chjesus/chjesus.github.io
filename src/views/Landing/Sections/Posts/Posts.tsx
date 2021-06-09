@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Row, Col, Divider } from 'antd';
-import Card from '../../../../components/Card';
+// import Card from '../../../../components/Card';
 
 import {
   DivContainer,
@@ -20,7 +20,7 @@ const Posts: React.FC = () => {
         <Row gutter={[32, 32]}>
           {PostsList.map((post) => (
             <Col key={post.id} xs={24} sm={24} md={12} lg={12} xl={8}>
-              <Card type="posts" />
+              {/* <Card type="posts" /> */}
             </Col>
           ))}
         </Row>

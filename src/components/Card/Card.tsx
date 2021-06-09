@@ -1,28 +1,39 @@
 import React from 'react';
-
+import { Row, Col } from 'antd';
 import Button from '../Button';
 
-import PortfolioLogo from '../../assets/images/the-movie-1.png';
-
-import { CardP, Img, DivContent, H3, Text } from './styledCard';
+import { CardP, Img, DivContent, H3, Text, Link } from './styledCard';
 
 interface PropsTypes {
+  title: string;
+  content: string;
+  url: string;
+  img: string;
+  tags: string[];
   type: string;
 }
 
 const Card: React.FC<PropsTypes> = (props) => {
-  const { type } = props;
+  const { title, content, img, url, tags, type } = props;
 
   return (
-    <CardP card={type} cover={<Img src={PortfolioLogo} alt="project-image" />}>
+    <CardP card={type} cover={<Img src={img} alt="project-image" />}>
       <DivContent>
-        <H3>Lorem ipsum dolor sit amet</H3>
+        <H3>{title}</H3>
         <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet ut
-          viverra fermentum vitae eget gravida.
+          {content}
+          <Link href={url} target="_blank" rel="noreferrer">
+            Visit Site
+          </Link>
         </Text>
       </DivContent>
-      <Button type="link" shape="round" size="small" value="vasdas"></Button>
+      <Row gutter={[8, 8]}>
+        {tags.map((tag) => (
+          <Col span="auto" key={tag}>
+            <Button type="link" shape="round" size="small" value={tag} />
+          </Col>
+        ))}
+      </Row>
     </CardP>
   );
 };
