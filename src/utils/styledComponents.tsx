@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import { screens } from '../utils/BreakPoints';
 
+interface Attributes {
+  color: string;
+  name?: string;
+}
+
 export const Container = styled.div`
   max-width: 1366px;
   margin: 0 auto;
@@ -88,7 +93,7 @@ export const Span = styled.span`
   color: var(--color-hight-title);
 `;
 
-export const DivContainer = styled.div`
+export const DivContainer = styled.div<Attributes>`
   background-color: ${(props) =>
     props.color === 'hight' ? 'var(--bg-dark-hight)' : 'var(--bg-dark)'};
   width: 100%;

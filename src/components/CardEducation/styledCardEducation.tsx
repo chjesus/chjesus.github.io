@@ -112,3 +112,14 @@ export const Text = styled.p`
     font-size: 18px;
   }
 `;
+
+export const Link = styled.a`
+  color: var(--color-link);
+  font-weight: 500;
+  padding-left: 0.5rem;
+  display: inline-block;
+
+  :hover {
+    text-decoration: underline;
+  }
+`;

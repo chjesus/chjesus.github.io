@@ -13,7 +13,7 @@ import { Projects } from '../../../../utils/Data';
 
 const Portfolio: React.FC = () => {
   return (
-    <DivContainer color="low">
+    <DivContainer color="low" id="portfolio">
       <Container>
         <H2>Portfolio</H2>
         <Divider orientation="left" />

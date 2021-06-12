@@ -13,7 +13,7 @@ import {
 import { Educations } from '../../../../utils/Data';
 const Education: React.FC = () => {
   return (
-    <DivContainer color="low">
+    <DivContainer color="low" id="education">
       <Container>
         <H2>Education</H2>
         <Divider orientation="left" />
@@ -25,6 +25,7 @@ const Education: React.FC = () => {
                 dateStart={education.date_start}
                 dateEnd={education.date_end}
                 content={education.content}
+                certificate={education.certificate}
               />
             </Col>
           ))}

@@ -35,7 +35,7 @@ export const Educations = [
     date_start: '2012',
     date_end: 'Present',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique turpis placerat mattis auctor massa justo pellentesque. Faucibus aenean mattis tincidunt mi morbi.',
+      'I am currently studying the 7th semester of the computer science engineering degree.',
     certificate: false,
   },
   {
@@ -44,8 +44,9 @@ export const Educations = [
     date_start: '2019',
     date_end: '2020',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique turpis placerat mattis auctor massa justo pellentesque. Faucibus aenean mattis tincidunt mi morbi.',
-    certificate: true,
+      'I had the opportunity to be benefited in the 2nd round of the thousand scholarships that were awarded to Venezuelans by platzi in 2019 where I have so far 30 javascript and react courses.',
+    certificate:
+      'https://platzi-user-api.jecsham.com/api/v1/getUserSummary/@chjesus',
   },
   {
     id: 2,
@@ -53,8 +54,8 @@ export const Educations = [
     date_start: '2021',
     date_end: 'Present',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique turpis placerat mattis auctor massa justo pellentesque. Faucibus aenean mattis tincidunt mi morbi.',
-    certificate: true,
+      'I decided to invest in myself, so I have acquired some react and vuejs courses on udemy to be able to expand my knowledge in other javascript frameworks with the aim of becoming a fullstack.',
+    certificate: false,
   },
 ];
 
@@ -87,7 +88,7 @@ export const ExperienceList = [
 
 export const Projects = [
   {
-    id: 3,
+    id: 0,
     title: 'Divain Samples',
     content:
       'Tienda para la seleccion de diversas muestras de perfumes para hombre, mujer, unisex',
@@ -137,7 +138,7 @@ export const Projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Crypto Prices',
     content:
       'Sitio web usando Vuejs para listar las 20 mejores criptomonedas mas populares en el mercado usando la api de coincap',
@@ -146,7 +147,7 @@ export const Projects = [
     tags: ['vue', 'vue-router', 'tailwindcss', 'numeral'],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Search users - Github',
     content: 'Un buscador de usuarios usando la api de github',
     img: 'https://res.cloudinary.com/chjesus/image/upload/v1623207141/CV/Projects/search-user-github_mu8qgr.png',

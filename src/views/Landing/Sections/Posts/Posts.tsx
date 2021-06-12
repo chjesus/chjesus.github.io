@@ -13,7 +13,7 @@ import { PostsList } from '../../../../utils/Data';
 
 const Posts: React.FC = () => {
   return (
-    <DivContainer color="hight">
+    <DivContainer color="hight" id="posts">
       <Container>
         <H2>Posts</H2>
         <Divider orientation="left" />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { Link, animateScroll as scroll } from 'react-scroll';
 import { Row, Col } from 'antd';
 import { MenuUnfoldOutlined } from '@ant-design/icons';
 
@@ -19,9 +20,12 @@ import {
 } from './styledNav';
 
 const Nav: React.FC = () => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState<boolean>(false);
+  const [name, setName] = useState<string>('name');
 
   const showDrawer = () => {
+    console.log(scroll);
+
     setVisible(true);
   };
 
@@ -64,33 +68,87 @@ const Nav: React.FC = () => {
                     </DrawerHead>
                   </Col>
                   <Col span="24">
-                    <Menu defaultSelectedKeys={['home']} theme="dark">
+                    <Menu defaultSelectedKeys={[name]} theme="dark">
                       <Item key="home" icon={<Icon type="icon-home" />}>
-                        Home
+                        <Link
+                          to="home"
+                          spy={true}
+                          smooth={true}
+                          offset={70}
+                          duration={500}
+                          onClick={() => scroll.scrollToTop()}
+                        >
+                          Home
+                        </Link>
                       </Item>
                       <Item
                         key="about"
                         icon={<Icon type="icon-bxs-user-detail" />}
                       >
-                        About me
+                        <Link
+                          to="about"
+                          spy={true}
+                          smooth={true}
+                          offset={70}
+                          duration={500}
+                          onClick={() => setName('about')}
+                        >
+                          About me
+                        </Link>
                       </Item>
                       <Item
                         key="education"
                         icon={<Icon type="icon-education" />}
                       >
-                        Education
+                        <Link
+                          to="education"
+                          spy={true}
+                          smooth={true}
+                          offset={70}
+                          duration={500}
+                          onClick={() => setName('education')}
+                        >
+                          Education
+                        </Link>
                       </Item>
                       <Item
                         key="experience"
                         icon={<Icon type="icon-xiangmujingyan" />}
                       >
-                        Experience
+                        <Link
+                          to="experience"
+                          spy={true}
+                          smooth={true}
+                          offset={70}
+                          duration={500}
+                          onClick={() => setName('experience')}
+                        >
+                          Experience
+                        </Link>
                       </Item>
                       <Item key="portfolio" icon={<Icon type="icon-work" />}>
-                        Portfolio
+                        <Link
+                          to="portfolio"
+                          spy={true}
+                          smooth={true}
+                          offset={70}
+                          duration={500}
+                          onClick={() => setName('portfolio')}
+                        >
+                          Portfolio
+                        </Link>
                       </Item>
                       <Item key="posts" icon={<Icon type="icon-list-add" />}>
-                        Posts
+                        <Link
+                          to="posts"
+                          spy={true}
+                          smooth={true}
+                          offset={70}
+                          duration={500}
+                          onClick={() => setName('posts')}
+                        >
+                          Posts
+                        </Link>
                       </Item>
                     </Menu>
                   </Col>

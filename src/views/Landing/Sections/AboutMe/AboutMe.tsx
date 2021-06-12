@@ -22,7 +22,7 @@ import { Services } from '../../../../utils/Data';
 
 const AboutMe: React.FC = () => {
   return (
-    <DivContainer color="hight">
+    <DivContainer color="hight" id="about">
       <Container>
         <H2>
           About <Span>Me</Span>

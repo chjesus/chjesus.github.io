@@ -18,7 +18,7 @@ const Experience: React.FC = () => {
   const alternate = md ? 'alternate' : 'left';
 
   return (
-    <DivContainer color="hight">
+    <DivContainer color="hight" id="experience">
       <Container>
         <H2>Experience</H2>
         <Divider orientation="left" />
