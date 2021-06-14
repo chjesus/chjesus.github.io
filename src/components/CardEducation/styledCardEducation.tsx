@@ -1,13 +1,14 @@
 import styled from 'styled-components';
+import { Modal as ModalAntd, Carousel as CarouselAntd } from 'antd';
 import { screens } from '../../utils/BreakPoints';
 
 export const Div = styled.div`
   background: linear-gradient(90deg, var(--bg-dark-hight), transparent);
-
   position: relative;
   z-index: 0;
   overflow: hidden;
   transition: 0.2s;
+
   :hover {
     cursor: pointer;
     background-color: var(--bg-dark-hight);
@@ -116,10 +117,61 @@ export const Text = styled.p`
 export const Link = styled.a`
   color: var(--color-link);
   font-weight: 500;
-  padding-left: 0.5rem;
   display: inline-block;
 
   :hover {
     text-decoration: underline;
+  }
+`;
+
+export const Modal = styled(ModalAntd)`
+  .ant-modal-content {
+    background-color: var(--bg-dark);
+    padding: 1rem;
+    ${screens.xl} {
+      padding: 1rem;
+    }
+    .ant-modal-header {
+      background-color: var(--bg-dark);
+      border: 0;
+    }
+    .ant-modal-close-x {
+      color: var(--color-icon);
+    }
+  }
+  .ant-card-meta-title {
+    color: var(--color-text);
+    font-size: 1rem;
+  }
+`;
+
+export const CertificateContainer = styled.div`
+  background-color: var(--bg-dark-hight);
+  padding: 1rem;
+  ${screens.xl} {
+    padding: 2rem;
+  }
+`;
+
+export const CarrouselItem = styled.div``;
+
+export const FigureImage = styled.figure`
+  max-width: 500px;
+  margin: 0 auto;
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
+export const Carousel = styled(CarouselAntd)`
+  && {
+    display: none;
+  }
+  ${screens.xl} {
+    && {
+      display: block;
+    }
   }
 `;

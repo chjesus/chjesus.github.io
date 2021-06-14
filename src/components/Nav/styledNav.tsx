@@ -7,7 +7,7 @@ const { Header } = Layout;
 export const HeaderNav = styled(Header)`
   position: fixed;
   height: auto;
-  z-index: 10;
+  z-index: 2;
   top: 0;
   left: 0;
   padding: 0;
