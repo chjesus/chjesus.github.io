@@ -66,7 +66,7 @@ export const ExperienceList = [
     date_start: 'February 2020',
     date_end: 'April 2020',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. At mattis libero, tellus congue ultrices dictum aliquet purus.',
+      'Be part of the agency that is dedicated to the development of different web applications, be part of the frontend team using some technologies like Angular 8, HTML, CSS JS, Bootstrap and Microservices like Docker.',
   },
   {
     id: 1,
@@ -74,7 +74,7 @@ export const ExperienceList = [
     date_start: 'June 2020',
     date_end: 'April 2021',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. At mattis libero, tellus congue ultrices dictum aliquet purus.',
+      'I worked as a freelance frontend developer using the upwork platform where I had the opportunity to use technologies like ReactJs, Redux, Redux-thunk and template development using HTML, CSS, SCSS, JS.',
   },
   {
     id: 2,
@@ -82,7 +82,7 @@ export const ExperienceList = [
     date_start: 'May 2021',
     date_end: 'Present',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. At mattis libero, tellus congue ultrices dictum aliquet purus.',
+      'Frontend developer of zalvadora, a company that is dedicated to training and knowledge management, through its system (LMS + KMS) with multiple comfortable tools.',
   },
 ];
 

@@ -28,20 +28,35 @@ export const Btn = styled(Button)`
     props.shape === 'round' && props.type === 'link'
       ? 'var(--color-link)'
       : 'var(--color-text)'};
-  display: inline-block;
-  span {
-    display: flex;
-    justify-content: center;
+
+  && {
+    height: auto;
+    display: inline-flex;
     align-items: center;
+    padding: 6.4px 20px !important;
+    justify-content: center;
+    transition: all 0.3s;
+
+    :focus {
+      background: transparent;
+      color: var(--color-link);
+    }
+    :hover {
+      background-color: var(--bg-btn);
+      color: var(--color-text);
+    }
   }
+
   svg {
     width: 30px;
     height: 30px;
   }
+
   :focus {
     background-color: var(--bg-btn);
     border-color: var(--color-border);
   }
+
   :hover {
     ${StylesTypeButton}
     color: ${(props) =>

@@ -6,10 +6,18 @@ interface PropsType extends ButtonProps {
 }
 
 export const Button: React.FC<PropsType> = (props) => {
-  const { type, value, shape, size, icon, showDrawer } = props;
+  const { type, value, shape, size, icon, href, target, showDrawer } = props;
 
   return (
-    <Btn type={type} shape={shape} size={size} icon={icon} onClick={showDrawer}>
+    <Btn
+      type={type}
+      shape={shape}
+      size={size}
+      icon={icon}
+      href={href}
+      target={target}
+      onClick={showDrawer}
+    >
       {value}
     </Btn>
   );

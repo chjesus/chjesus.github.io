@@ -65,7 +65,14 @@ const Home: React.FC = () => {
         </HomeDiv>
         <HomeDiv border={false}>
           <HomeSocials>
-            <Button type="text" shape="round" size="large" value="Hire me" />
+            <Button
+              type="link"
+              shape="round"
+              size="large"
+              value="Hire me"
+              href="https://www.upwork.com/workwith/jesuschacon6"
+              target="_blank"
+            />
             <Socials />
           </HomeSocials>
         </HomeDiv>
