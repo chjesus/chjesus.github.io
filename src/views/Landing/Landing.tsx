@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Layout } from 'antd';
 
 import Nav from '../../components/Nav';
@@ -10,14 +11,10 @@ import Portfolio from './Sections/Portfolio';
 import Posts from './Sections/Posts';
 import Footer from './Sections/Footer';
 
-// import { Scrollbars } from 'react-custom-scrollbars';
-
-// import CustomScrollBars from '../../utils/CustomScroballBars';
 const { Content } = Layout;
 
 const Landing: React.FC = () => {
   return (
-    // <CustomScrollBars style={{ height: '100vh' }}>
     <Layout className="container">
       <Content>
         <Nav />
@@ -27,10 +24,9 @@ const Landing: React.FC = () => {
         <Experience />
         <Portfolio />
         <Posts />
+        <Footer />
       </Content>
-      <Footer />
     </Layout>
-    // </CustomScrollBars>
   );
 };
 

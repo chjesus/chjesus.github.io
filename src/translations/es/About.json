@@ -1,0 +1,15 @@
+{
+  "description": "Un frontend developoer autónomo. Capaz de autogestionarse eficazmente durante proyectos independientes, así como de colaborar en un entorno de equipo. Siempre doy lo mejor de mí en todo lo que hago.",
+  "service-1":{
+    "title": "Dedicado",
+    "description": "Doy todo mi esfuerzo para superar mis propios límites y ser la mejor versión de mí mismo que puedo ser."
+  },
+  "service-2":{
+    "title": "Self-taught",
+    "description": "Me gusta invertir en mi aprendizaje, estoy constantemente aprendiendo cosas nuevas por mi cuenta."
+  },
+  "service-3":{
+    "title": "Tech Enthusiast",
+    "description": "Me siento cómodo aprendiendo a usar nuevos idiomas o herramientas para mejorar mi flujo de trabajo."
+  }
+}

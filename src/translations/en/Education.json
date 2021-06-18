@@ -1,0 +1,15 @@
+{
+  "unet":{
+    "title": "",
+    "description": "I am currently studying the 7th semester of the computer science engineering degree."
+  },
+  "platzi":{
+    "title": "",
+    "description": "I had the opportunity to be benefited in the 2nd round of the thousand scholarships that were awarded to Venezuelans by platzi in 2019 where I have so far 30 javascript and react courses"
+  },
+  "udemy":{
+    "title": "",
+    "description": "I decided to invest in myself, so I have acquired some react and vuejs courses on udemy to be able to expand my knowledge in other javascript frameworks with the aim of becoming a fullstack."
+  },
+  "btn": "Learn More"
+}
