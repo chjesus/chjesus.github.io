@@ -1,18 +1,20 @@
 import React from 'react';
-
+import { useTranslation } from 'react-i18next';
 import { Row, Col } from 'antd';
 
 import { Div, Icon, H3, H4, Text } from './styledCardExperience';
 
 interface PropsType {
+  id: string;
   title: string;
   dateStart: string;
   dateEnd: string;
-  content: string;
   position: string;
 }
 const CardExperience: React.FC<PropsType> = (props) => {
-  const { title, dateStart, dateEnd, content, position } = props;
+  const { id, title, dateStart, dateEnd, position } = props;
+  const [t] = useTranslation('Experience');
+
   const band = position === 'left';
   const iconLeft = band ? 1 : 2;
   const iconRight = band ? 2 : 1;
@@ -28,7 +30,7 @@ const CardExperience: React.FC<PropsType> = (props) => {
           <H4>
             {dateStart} - {dateEnd}
           </H4>
-          <Text>{content}</Text>
+          <Text>{t(`${id}.description`)}</Text>
         </Col>
       </Row>
     </Div>

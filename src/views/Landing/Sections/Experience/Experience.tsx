@@ -1,5 +1,6 @@
 import React from 'react';
 import { Divider, Grid } from 'antd';
+import { useTranslation } from 'react-i18next';
 
 import {
   DivContainer,
@@ -15,21 +16,22 @@ const { useBreakpoint } = Grid;
 
 const Experience: React.FC = () => {
   const { md } = useBreakpoint();
+  const [t] = useTranslation('Experience');
   const alternate = md ? 'alternate' : 'left';
 
   return (
     <DivContainer color="hight" id="experience">
       <Container>
-        <H2>Experience</H2>
+        <H2>{t('title')}</H2>
         <Divider orientation="left" />
         <Timeline mode={alternate}>
           {ExperienceList.map((experience, index) => (
             <TimelineItem key={experience.id}>
               <CardExperience
+                id={experience.id}
                 title={experience.title}
                 dateStart={experience.date_start}
                 dateEnd={experience.date_end}
-                content={experience.content}
                 position={index % 2 !== 0 ? (md ? 'right' : 'left') : 'left'}
               />
             </TimelineItem>

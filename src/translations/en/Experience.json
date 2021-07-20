@@ -1,11 +1,12 @@
 {
-  "Villartechnologies":{
+  "villartechnologies":{
     "description": "Be part of the agency that is dedicated to the development of different web applications, be part of the frontend team using some technologies like Angular 8, HTML, CSS JS, Bootstrap and Microservices like Docker."
   },
-  "Freelancer-in-Upwork":{
+  "upwork":{
     "description": "I worked as a freelance frontend developer using the upwork platform where I had the opportunity to use technologies like ReactJs, Redux, Redux-thunk and template development using HTML, CSS, SCSS, JS."
   },
-  "Zalvadora":{
+  "zalvadora":{
     "description": "Frontend developer of zalvadora, a company that is dedicated to training and knowledge management, through its system (LMS + KMS) with multiple comfortable tools."
-  }
+  },
+  "title": "Experience"
 }

@@ -11,5 +11,6 @@
     "title": "Udemy",
     "description": "Decidí invertir en mí mismo, así que he adquirido algunos cursos de vuejs y nodejs en udemy para poder ampliar mis conocimientos en otros frameworks javascript con el objetivo de convertirme en un fullstack."
   },
-  "btn": "Aprende más"
+  "btn": "Aprende más",
+  "title": "Educación"
 }

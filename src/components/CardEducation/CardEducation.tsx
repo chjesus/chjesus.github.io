@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { AxiosResponse, AxiosError } from 'axios';
 import { Row, Col, Card, Avatar } from 'antd';
+
 import Api from '../../utils/Api';
 import {
   Div,
@@ -16,13 +18,11 @@ import {
   Image,
   Carousel,
 } from './styledCardEducation';
-
 import CustomScrollBars from '../../utils/CustomScroballBars';
 interface Education {
-  title: string;
+  id: string;
   dateStart: string;
   dateEnd: string;
-  content: string;
   certificate: string | boolean;
 }
 
@@ -37,8 +37,11 @@ interface Course {
 }
 
 const { Meta } = Card;
+
 const CardEducation: React.FC<Education> = (props) => {
-  const { title, dateStart, dateEnd, content, certificate } = props;
+  const { id, dateStart, dateEnd, certificate } = props;
+
+  const [t] = useTranslation('Education');
   const [modalVisible, setModalVisible] = useState<boolean>(false);
   const [courses, setCourses] = useState<Course | null>();
 
@@ -63,7 +66,7 @@ const CardEducation: React.FC<Education> = (props) => {
     <Div>
       <Row gutter={[0, 8]}>
         <Col span="24">
-          <H3>{title}</H3>
+          <H3>{t(`${id}.title`)}</H3>
         </Col>
         <Col span="24">
           <H4>
@@ -72,10 +75,10 @@ const CardEducation: React.FC<Education> = (props) => {
         </Col>
         <Col span="24">
           <Text>
-            {content}
+            {t(`${id}.description`)}
             {certificate && (
               <Link rel="noreferrer" onClick={() => setModalVisible(true)}>
-                Learn More
+                {t('btn')}
               </Link>
             )}
           </Text>

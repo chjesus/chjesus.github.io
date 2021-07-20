@@ -14,5 +14,6 @@
   "project-5":{
     "description": "Un buscador de usuarios usando la api de github"
   },
-  "btn-visit": "Visitar sitio"
+  "btn-visit": "Visitar sitio",
+  "title": "Portafolio"
 }

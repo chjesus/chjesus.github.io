@@ -1,7 +1,6 @@
 import React from 'react';
-
 import Typed from 'react-typed';
-
+import { useTranslation } from 'react-i18next';
 import { Row, Col } from 'antd';
 
 import Button from '../../../../components/Button';
@@ -19,19 +18,20 @@ import {
 } from './styledHome';
 
 const Home: React.FC = () => {
+  const [t] = useTranslation('Home');
   return (
     <HomeContainer>
       <Container>
         <HomeDiv border={true}>
           <Row>
             <Col span="auto">
-              <TitleGreet>Hi,</TitleGreet>
+              <TitleGreet>{t('title')}</TitleGreet>
             </Col>
           </Row>
           <Row>
             <Col span="auto">
               <HomeH1>
-                I’m <Span>Jesus Chacon</Span>
+                {t('sub-title')} <Span>Jesus Chacon</Span>
               </HomeH1>
             </Col>
           </Row>
@@ -42,11 +42,7 @@ const Home: React.FC = () => {
               lg={{ span: '14' }}
               xl={{ span: '8' }}
             >
-              <Text>
-                I specialize in front-end development. I am creative, proactive
-                and committed with a passion for making things beautiful and
-                efficient.
-              </Text>
+              <Text>{t('description')}</Text>
             </Col>
           </Row>
           <Row>

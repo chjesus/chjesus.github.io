@@ -27,6 +27,8 @@ const Nav: React.FC = () => {
         visible={visible}
       >
         <Menu />
+        <button>EN</button>
+        <button>ES</button>
       </Drawer>
     </>
   );

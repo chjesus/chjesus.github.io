@@ -1,14 +1,16 @@
 {
   "description": "An autonomous frontend developoer. Able to effectively self-manage during independent projects, as well as collaborate in a team environment. I always do my best in everything I do.",
-  "service-1":{
+  "title": "About",
+  "title-color" : "Me",
+  "service-0":{
     "title": "Dedicated",
     "description": "I give all my effort to surpass my own limits and be the best version of myself I can be"
   },
-  "service-2":{
+  "service-1":{
     "title": "Self-taught",
     "description": "I'm curious and I love investing in my learning, I'm constantly learning new things on my own"
   },
-  "service-3":{
+  "service-2":{
     "title": "Tech Enthusiast",
     "description": "I feel comfortable learning to use new languages or tools to improve my workflow"
   }

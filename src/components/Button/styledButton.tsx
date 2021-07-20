@@ -5,15 +5,15 @@ const StylesTypeButton = (props: ButtonProps) => {
   const bgColor =
     props.shape === 'round'
       ? props.type === 'text'
-        ? 'var(--bg-btn)'
-        : 'transparent'
+        ? 'transparent'
+        : 'var(--bg-btn)'
       : 'transparent';
 
   const borderColor =
     props.shape === 'round'
       ? props.type === 'text'
-        ? 'transparent'
-        : 'var(--color-border)'
+        ? 'var(--color-border)'
+        : 'transparent'
       : 'transparent';
 
   return `
@@ -25,7 +25,7 @@ const StylesTypeButton = (props: ButtonProps) => {
 export const Btn = styled(Button)`
   ${StylesTypeButton}
   color: ${(props) =>
-    props.shape === 'round' && props.type === 'link'
+    props.shape === 'round' && props.type === 'text'
       ? 'var(--color-link)'
       : 'var(--color-text)'};
 
@@ -42,8 +42,10 @@ export const Btn = styled(Button)`
       color: var(--color-link);
     }
     :hover {
-      background-color: var(--bg-btn);
-      color: var(--color-text);
+      color: ${(props) =>
+        props.type === 'link' && props.shape === 'circle'
+          ? 'var(--color-link)'
+          : 'var(--color-text)'};
     }
   }
 

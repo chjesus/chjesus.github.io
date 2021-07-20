@@ -2,8 +2,6 @@ export const Services = [
   {
     id: 0,
     title: 'Dedicated',
-    content:
-      'I give all my effort to surpass my own limits and be the best version of myself I can be',
     icon: 'icon-Curlybrackets',
     img: 'https://res.cloudinary.com/chjesus/image/upload/v1622950983/CV/Services/service_1_c28bol.svg',
     position: 'left',
@@ -11,8 +9,6 @@ export const Services = [
   {
     id: 1,
     title: 'Self-taught',
-    content:
-      "I'm curious and I love investing in my learning, I'm constantly learning new things on my own",
     icon: 'icon-bank-fill',
     img: 'https://res.cloudinary.com/chjesus/image/upload/v1622950983/CV/Services/service_2_dyalgi.svg',
     position: 'right',
@@ -20,8 +16,6 @@ export const Services = [
   {
     id: 2,
     title: 'Tech Enthusiast',
-    content:
-      'I feel comfortable learning to use new languages or tools to improve my workflow',
     icon: 'icon-Timealt2',
     img: 'https://res.cloudinary.com/chjesus/image/upload/v1622950983/CV/Services/service_3_ckn5ek.svg',
     position: 'left',
@@ -30,59 +24,47 @@ export const Services = [
 
 export const Educations = [
   {
-    id: 0,
+    id: 'unet',
     title: 'Universidad Nacional Experimental del Táchira',
     date_start: '2012',
     date_end: 'Present',
-    content:
-      'I am currently studying the 7th semester of the computer science engineering degree.',
     certificate: false,
   },
   {
-    id: 1,
+    id: 'platzi',
     title: 'Platzi',
     date_start: '2019',
     date_end: '2020',
-    content:
-      'I had the opportunity to be benefited in the 2nd round of the thousand scholarships that were awarded to Venezuelans by platzi in 2019 where I have so far 30 javascript and react courses.',
     certificate:
       'https://platzi-user-api.jecsham.com/api/v1/getUserSummary/@chjesus',
   },
   {
-    id: 2,
+    id: 'udemy',
     title: 'Udemy',
     date_start: '2021',
     date_end: 'Present',
-    content:
-      'I decided to invest in myself, so I have acquired some react and vuejs courses on udemy to be able to expand my knowledge in other javascript frameworks with the aim of becoming a fullstack.',
     certificate: false,
   },
 ];
 
 export const ExperienceList = [
   {
-    id: 0,
+    id: 'villartechnologies',
     title: 'Villartechnologies',
     date_start: 'February 2020',
     date_end: 'April 2020',
-    content:
-      'Be part of the agency that is dedicated to the development of different web applications, be part of the frontend team using some technologies like Angular 8, HTML, CSS JS, Bootstrap and Microservices like Docker.',
   },
   {
-    id: 1,
+    id: 'upwork',
     title: 'Freelancer in Upwork',
     date_start: 'June 2020',
     date_end: 'April 2021',
-    content:
-      'I worked as a freelance frontend developer using the upwork platform where I had the opportunity to use technologies like ReactJs, Redux, Redux-thunk and template development using HTML, CSS, SCSS, JS.',
   },
   {
-    id: 2,
+    id: 'zalvadora',
     title: 'Zalvadora',
     date_start: 'May 2021',
     date_end: 'Present',
-    content:
-      'Frontend developer of zalvadora, a company that is dedicated to training and knowledge management, through its system (LMS + KMS) with multiple comfortable tools.',
   },
 ];
 
@@ -90,8 +72,6 @@ export const Projects = [
   {
     id: 0,
     title: 'Divain Samples',
-    content:
-      'Tienda para la seleccion de diversas muestras de perfumes para hombre, mujer, unisex',
     img: 'https://res.cloudinary.com/chjesus/image/upload/v1623210003/CV/Projects/Divain_-_Collections_hombre_1_ullfwa.png',
     url: 'https://divainsamples.com/',
     tags: [
@@ -113,7 +93,6 @@ export const Projects = [
   {
     id: 1,
     title: 'CRUD Badges',
-    content: 'Un crud basico de insignias para los usuarios',
     img: 'https://res.cloudinary.com/chjesus/image/upload/v1623211665/CV/Projects/user-badge_pq4cry.png',
     url: 'https://chjesus.github.io/user-badges',
     tags: ['react', 'react-router', 'sass', 'css', 'firebase'],
@@ -121,8 +100,6 @@ export const Projects = [
   {
     id: 2,
     title: 'Landing Page',
-    content:
-      'Construcción de mano de aterrizaje profesional y optimizada a mano usando React y styled-components',
     img: 'https://res.cloudinary.com/chjesus/image/upload/v1623212028/CV/Projects/React_App_1_mkzube.png',
     url: '',
     tags: [
@@ -140,8 +117,6 @@ export const Projects = [
   {
     id: 3,
     title: 'Crypto Prices',
-    content:
-      'Sitio web usando Vuejs para listar las 20 mejores criptomonedas mas populares en el mercado usando la api de coincap',
     img: 'https://res.cloudinary.com/chjesus/image/upload/v1623208281/CV/Projects/crypto-prices_hgnikg.png',
     url: 'https://prices-crypto.netlify.app/',
     tags: ['vue', 'vue-router', 'tailwindcss', 'numeral'],
@@ -149,7 +124,6 @@ export const Projects = [
   {
     id: 4,
     title: 'Search users - Github',
-    content: 'Un buscador de usuarios usando la api de github',
     img: 'https://res.cloudinary.com/chjesus/image/upload/v1623207141/CV/Projects/search-user-github_mu8qgr.png',
     url: 'https://chjesus.github.io/search-user-github/',
     tags: ['react', 'sass', 'ant design', 'css'],

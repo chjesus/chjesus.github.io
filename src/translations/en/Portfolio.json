@@ -1,18 +1,19 @@
 {
-  "project-1":{
+  "project-0":{
     "description": "Shop for the selection of various samples of perfumes for men, women, unisex"
   },
-  "project-2":{
+  "project-1":{
     "description": "A basic badge crud for users"
   },
-  "project-3":{
+  "project-2":{
     "description": "Professional and hand-optimized landing hand construction using React and styled-components"
   },
-  "project-4":{
+  "project-3":{
     "description": "Website using Vuejs to list the top 20 most popular cryptocurrencies on the market using the coincap api"
   },
-  "project-5":{
+  "project-4":{
     "description": "A user search engine using the github api"
   },
-  "btn-visit": "Visit site"
+  "btn": "Visit site",
+  "title": "Portfolio"
 }

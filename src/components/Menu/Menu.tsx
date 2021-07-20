@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
-
+import { useTranslation } from 'react-i18next';
 import { Row, Col } from 'antd';
 import { Div, MenuAntd, Item, Icon, H1, H2 } from './styledMenu';
 
 const Menu: React.FC = () => {
   const [name, setName] = useState<string>('name');
+  const [t] = useTranslation('Menu');
 
   return (
     <Row gutter={[0, 40]}>
@@ -34,7 +35,7 @@ const Menu: React.FC = () => {
               duration={500}
               onClick={() => scroll.scrollToTop()}
             >
-              Home
+              {t('home')}
             </Link>
           </Item>
           <Item key="about" icon={<Icon type="icon-bxs-user-detail" />}>
@@ -46,7 +47,7 @@ const Menu: React.FC = () => {
               duration={500}
               onClick={() => setName('about')}
             >
-              About me
+              {t('about')}
             </Link>
           </Item>
           <Item key="education" icon={<Icon type="icon-education" />}>
@@ -58,7 +59,7 @@ const Menu: React.FC = () => {
               duration={500}
               onClick={() => setName('education')}
             >
-              Education
+              {t('education')}
             </Link>
           </Item>
           <Item key="experience" icon={<Icon type="icon-xiangmujingyan" />}>
@@ -70,7 +71,7 @@ const Menu: React.FC = () => {
               duration={500}
               onClick={() => setName('experience')}
             >
-              Experience
+              {t('experience')}
             </Link>
           </Item>
           <Item key="portfolio" icon={<Icon type="icon-work" />}>
@@ -82,7 +83,7 @@ const Menu: React.FC = () => {
               duration={500}
               onClick={() => setName('portfolio')}
             >
-              Portfolio
+              {t('portfolio')}
             </Link>
           </Item>
           <Item key="posts" icon={<Icon type="icon-list-add" />}>
@@ -94,7 +95,7 @@ const Menu: React.FC = () => {
               duration={500}
               onClick={() => setName('posts')}
             >
-              Posts
+              {t('posts')}
             </Link>
           </Item>
         </MenuAntd>

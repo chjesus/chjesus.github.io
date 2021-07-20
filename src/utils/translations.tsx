@@ -19,6 +19,7 @@ import Education_EN from '../translations/en/Education.json';
 import Experience_EN from '../translations/en/Experience.json';
 import Portfolio_EN from '../translations/en/Portfolio.json';
 import Posts_EN from '../translations/en/Posts.json';
+import Menu_EN from '../translations/en/Menu.json';
 
 const resources = {
   es: {
@@ -30,6 +31,7 @@ const resources = {
     Posts: Posts_ES,
   },
   en: {
+    Menu: Menu_EN,
     Home: Home_EN,
     About: About_EN,
     Education: Education_EN,
