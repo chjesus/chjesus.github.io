@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 
 import { MenuUnfoldOutlined } from '@ant-design/icons';
+// import { ButtonType } from 'antd/lib/button';
+
 import Button from '../Button';
 import Menu from '../Menu';
 
-import { NavBar, Drawer } from './styledNav';
+import { NavBar, Drawer, ContainerBtnTranslate } from './styledNav';
 
 const Nav: React.FC = () => {
   const [visible, setVisible] = useState<boolean>(false);
+  const [value, setValue] = useState<boolean>(true);
+
+  const changeLanguage = (e: any) => {
+    setValue(!value);
+  };
 
   return (
     <>
@@ -17,7 +24,7 @@ const Nav: React.FC = () => {
           shape="circle"
           size="large"
           icon={<MenuUnfoldOutlined />}
-          showDrawer={() => setVisible(!visible)}
+          onClick={() => setVisible(!visible)}
         />
       </NavBar>
       <Drawer
@@ -27,8 +34,22 @@ const Nav: React.FC = () => {
         visible={visible}
       >
         <Menu />
-        <button>EN</button>
-        <button>ES</button>
+        <ContainerBtnTranslate>
+          <Button
+            type={value ? 'link' : 'text'}
+            shape="round"
+            size="small"
+            value="EN"
+            onClick={changeLanguage}
+          />
+          <Button
+            type={value ? 'text' : 'link'}
+            shape="round"
+            size="small"
+            value="ES"
+            onClick={changeLanguage}
+          />
+        </ContainerBtnTranslate>
       </Drawer>
     </>
   );

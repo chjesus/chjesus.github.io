@@ -2,11 +2,11 @@ import React from 'react';
 import { ButtonProps } from 'antd';
 import { Btn } from './styledButton';
 interface PropsType extends ButtonProps {
-  showDrawer?: React.MouseEventHandler;
+  onClick?: React.MouseEventHandler;
 }
 
 export const Button: React.FC<PropsType> = (props) => {
-  const { type, value, shape, size, icon, href, target, showDrawer } = props;
+  const { type, value, shape, size, icon, href, target, onClick } = props;
 
   return (
     <Btn
@@ -16,7 +16,7 @@ export const Button: React.FC<PropsType> = (props) => {
       icon={icon}
       href={href}
       target={target}
-      onClick={showDrawer}
+      onClick={onClick}
     >
       {value}
     </Btn>

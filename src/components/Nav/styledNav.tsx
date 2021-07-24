@@ -3,11 +3,10 @@ import { Drawer as DrawerAntd } from 'antd';
 
 export const NavBar = styled.nav`
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   top: 5%;
-  left: 95%;
+  right: 5%;
   background: rgba(255, 255, 255, 0);
-  width: 100%;
 `;
 
 export const Drawer = styled(DrawerAntd)`
@@ -18,3 +17,14 @@ export const Drawer = styled(DrawerAntd)`
     padding: 40px 0;
   }
 `;
+
+export const ContainerBtnTranslate = styled.div`
+  text-align: center;
+  padding-top: 2rem;
+
+  button {
+    margin: 0 0.5rem;
+  }
+`;
+
+export const ButtonTranslate = styled.button``;
