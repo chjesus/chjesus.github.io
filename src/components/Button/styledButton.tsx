@@ -36,17 +36,6 @@ export const Btn = styled(Button)`
     padding: 6.4px 20px !important;
     justify-content: center;
     transition: all 0.3s;
-
-    :focus {
-      background: transparent;
-      color: var(--color-link);
-    }
-    :hover {
-      color: ${(props) =>
-        props.type === 'link' && props.shape === 'circle'
-          ? 'var(--color-link)'
-          : 'var(--color-text)'};
-    }
   }
 
   svg {
@@ -57,11 +46,12 @@ export const Btn = styled(Button)`
   :focus {
     background-color: var(--bg-btn);
     border-color: var(--color-border);
+    color: var(--color-text);
   }
 
   :hover {
     ${StylesTypeButton}
     color: ${(props) =>
-      props.type !== 'link' ? 'var(--color-text)' : 'var(--color-link)'};
+      props.type === 'link' ? 'var(--color-text)' : 'var(--color-link)'};
   }
 `;

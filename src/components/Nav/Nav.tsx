@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-
+import { useTranslation } from 'react-i18next';
 import { MenuUnfoldOutlined } from '@ant-design/icons';
-// import { ButtonType } from 'antd/lib/button';
 
 import Button from '../Button';
 import Menu from '../Menu';
@@ -11,9 +10,12 @@ import { NavBar, Drawer, ContainerBtnTranslate } from './styledNav';
 const Nav: React.FC = () => {
   const [visible, setVisible] = useState<boolean>(false);
   const [value, setValue] = useState<boolean>(true);
+  // eslint-disable-next-line no-unused-vars
+  const [t, i18n] = useTranslation('Posts');
 
-  const changeLanguage = (e: any) => {
-    setValue(!value);
+  const changeLanguage = (value: boolean, language: string) => {
+    setValue(value);
+    i18n.changeLanguage(language.toLowerCase());
   };
 
   return (
@@ -40,14 +42,14 @@ const Nav: React.FC = () => {
             shape="round"
             size="small"
             value="EN"
-            onClick={changeLanguage}
+            onClick={(e) => changeLanguage(true, 'EN')}
           />
           <Button
             type={value ? 'text' : 'link'}
             shape="round"
             size="small"
             value="ES"
-            onClick={changeLanguage}
+            onClick={(e) => changeLanguage(false, 'ES')}
           />
         </ContainerBtnTranslate>
       </Drawer>
