@@ -8,7 +8,7 @@ import Education_ES from '../translations/es/Education.json';
 import Experience_ES from '../translations/es/Experience.json';
 import Portfolio_ES from '../translations/es/Portfolio.json';
 import Posts_ES from '../translations/es/Posts.json';
-
+import Menu_ES from '../translations/es/Menu.json';
 /**
  * English translations
  */
@@ -23,6 +23,7 @@ import Menu_EN from '../translations/en/Menu.json';
 
 const resources = {
   es: {
+    Menu: Menu_ES,
     Home: Home_ES,
     About: About_ES,
     Education: Education_ES,

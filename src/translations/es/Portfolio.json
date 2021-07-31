@@ -1,17 +1,17 @@
 {
-  "project-1":{
+  "project-0":{
     "description": "Tienda para la seleccion de diversas muestras de perfumes para hombre, mujer, unisex"
   },
-  "project-2":{
+  "project-1":{
     "description": "Un crud basico de insignias para los usuarios"
   },
-  "project-3":{
+  "project-2":{
     "description": "Construcción de mano de aterrizaje profesional y optimizada a mano usando React y styled-components"
   },
-  "project-4":{
+  "project-3":{
     "description": "Sitio web usando Vuejs para listar las 20 mejores criptomonedas mas populares en el mercado usando la api de coincap"
   },
-  "project-5":{
+  "project-4":{
     "description": "Un buscador de usuarios usando la api de github"
   },
   "btn-visit": "Visitar sitio",
