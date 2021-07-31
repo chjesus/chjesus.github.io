@@ -1,0 +1,12 @@
+{
+  "villartechnologies":{
+    "description": "Fui parte de la agencia que se dedica al desarrollo de diferentes aplicaciones web, estuve en el equipo de frontend utilizando algunas tecnologías como Angular 8, HTML, CSS JS, Bootstrap y Microservicios como Docker."
+  },
+  "upwork":{
+    "description": "Trabajé como desarrollador frontend independiente usando la plataforma upwork donde tuve la oportunidad de usar tecnologías como ReactJs, Redux, Redux-thunk y desarrollo de plantillas usando HTML, CSS, SCSS, JS."
+  },
+  "zalvadora":{
+    "description": "Desarrollador frontend de zalvadora, empresa que se dedica a la formación y gestión del conocimiento, a través de su sistema (LMS + KMS) con múltiples herramientas cómodas."
+  },
+  "title": "Experiencia"
+}

@@ -1,0 +1,16 @@
+{
+  "unet":{
+    "title": "Universidad Nacional Experimental del Tachira",
+    "description": "Actualmente estoy cursando el 7º semestre de la carrera de ingeniería informática."
+  },
+  "platzi":{
+    "title": "Platzi",
+    "description": "Tuve la oportunidad de ser beneficiado en la 2da ronda de las mil becas que platzi otorgó a venezolanos en 2019 donde tengo hasta el momento 30 cursos de javascript y react."
+  },
+  "udemy":{
+    "title": "Udemy",
+    "description": "Decidí invertir en mí mismo, así que he adquirido algunos cursos de vuejs y nodejs en udemy para poder ampliar mis conocimientos en otros frameworks javascript con el objetivo de convertirme en un fullstack."
+  },
+  "btn": "Aprende más",
+  "title": "Educación"
+}

@@ -1,0 +1,74 @@
+{
+  "header":{
+    "title": "Hi,",
+    "sub-title": "I’m Jesus Chacon",
+    "description": "I specialize in front-end development. I am creative, proactive and committed with a passion for making things beautiful and efficient.",
+    "btn": "Hire me"
+  },
+  "aboutme":{
+    "description": "An autonomous frontend developoer. Able to effectively self-manage during independent projects, as well as collaborate in a team environment. I always do my best in everything I do.",
+    "services": {
+      "service-1":{
+        "title": "Dedicated",
+        "description": "I give all my effort to surpass my own limits and be the best version of myself I can be"
+      },
+      "service-2":{
+        "title": "Self-taught",
+        "description": "I'm curious and I love investing in my learning, I'm constantly learning new things on my own"
+      },
+      "service-3":{
+        "title": "Tech Enthusiast",
+        "description": "I feel comfortable learning to use new languages or tools to improve my workflow"
+      }
+    }
+  },
+  "education":{
+    "unet":{
+      "title": "",
+      "description": "I am currently studying the 7th semester of the computer science engineering degree."
+    },
+    "platzi":{
+      "title": "Platzi",
+      "description": "I had the opportunity to be benefited in the 2nd round of the thousand scholarships that were awarded to Venezuelans by platzi in 2019 where I have so far 30 javascript and react courses"
+    },
+    "udemy":{
+      "title": "Udemy",
+      "description": "I decided to invest in myself, so I have acquired some react and vuejs courses on udemy to be able to expand my knowledge in other javascript frameworks with the aim of becoming a fullstack."
+    },
+    "btn": "Learn More"
+  },
+  "experience":{
+    "Villartechnologies":{
+      "description": "I was part of the agency that is dedicated to the development of different web applications, I was in the frontend team using some technologies such as Angular 8, HTML, CSS JS, Bootstrap and Microservices such as Docker."
+    },
+    "Freelancer-in-Upwork":{
+      "description": "I worked as a freelance frontend developer using the upwork platform where I had the opportunity to use technologies like ReactJs, Redux, Redux-thunk and template development using HTML, CSS, SCSS, JS."
+    },
+    "Zalvadora":{
+      "description": "Frontend developer of zalvadora, a company that is dedicated to training and knowledge management, through its system (LMS + KMS) with multiple comfortable tools."
+    }
+  },
+  "portfolio":{
+    "project-1":{
+      "description": "Tienda para la seleccion de diversas muestras de perfumes para hombre, mujer, unisex"
+    },
+    "project-2":{
+      "description": "Un crud basico de insignias para los usuarios"
+    },
+    "project-3":{
+      "description": "Construcción de mano de aterrizaje profesional y optimizada a mano usando React y styled-components"
+    },
+    "project-4":{
+      "description": "Sitio web usando Vuejs para listar las 20 mejores criptomonedas mas populares en el mercado usando la api de coincap"
+    },
+    "project-5":{
+      "description": "Un buscador de usuarios usando la api de github"
+    },
+    "btn-visit": "Visit site"
+  },
+  "posts":{
+    "post-1": {
+      "description": ""
+    }
+  }
+}
