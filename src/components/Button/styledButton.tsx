@@ -42,8 +42,8 @@ export const Btn = styled(Button)`
   }
 
   :focus {
-    background-color: var(--bg-btn);
-    border-color: var(--color-border);
+    border-color: ${(props) =>
+      props.type === 'link' ? 'transparent' : 'var(--color-link)'};
     color: var(--color-text);
   }
 
