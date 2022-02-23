@@ -20,6 +20,8 @@ const Socials: React.FC = () => {
             type="link"
             shape="circle"
             size="small"
+            href='https://github.com/chjesus'
+            target='_blank'
             icon={<GithubOutlined />}
           />
         </Col>
@@ -28,6 +30,8 @@ const Socials: React.FC = () => {
             type="link"
             shape="circle"
             size="small"
+            href='https://www.linkedin.com/in/jesus-chacon-510643162/'
+            target='_blank'
             icon={<LinkedinFilled />}
           />
         </Col>
@@ -36,6 +40,8 @@ const Socials: React.FC = () => {
             type="link"
             shape="circle"
             size="small"
+            href='https://twitter.com/ch__jesus'
+            target='_blank'
             icon={<TwitterSquareFilled />}
           />
         </Col>

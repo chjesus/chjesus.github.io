@@ -1,7 +1,6 @@
 /**
  * Spanish translations
  */
-
 import Home_ES from '../translations/es/Home.json';
 import About_ES from '../translations/es/About.json';
 import Education_ES from '../translations/es/Education.json';
@@ -9,10 +8,10 @@ import Experience_ES from '../translations/es/Experience.json';
 import Portfolio_ES from '../translations/es/Portfolio.json';
 import Posts_ES from '../translations/es/Posts.json';
 import Menu_ES from '../translations/es/Menu.json';
+
 /**
  * English translations
  */
-
 import Home_EN from '../translations/en/Home.json';
 import About_EN from '../translations/en/About.json';
 import Education_EN from '../translations/en/Education.json';
